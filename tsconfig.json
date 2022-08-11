@@ -1,0 +1,11 @@
+{
+  "extends": "@salesforce/dev-config/tsconfig",
+  "compilerOptions": {
+    "outDir": "lib",
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "module": "ES2020"
+  },
+  "include": ["./src/**/*.ts"]
+}
