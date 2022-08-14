@@ -1,0 +1,5 @@
+{
+  "commandDescription": "compares sfdx source snapshot files",
+  "examples": [],
+  "filepath": "path of the generated snapshot file"
+}
