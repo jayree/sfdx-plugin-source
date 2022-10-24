@@ -9,7 +9,7 @@
     "@oclif/core": "^1.13.10",
     "@salesforce/command": "^5.2.4",
     "@salesforce/source-deploy-retrieve": "^6.3.0",
-    "@salesforce/ts-types": "^1.5.20",
+    "@salesforce/ts-types": "^1.7.0",
     "chalk": "^5.0.1",
     "debug": "^4.3.4",
     "deep-object-diff": "^1.1.7",
