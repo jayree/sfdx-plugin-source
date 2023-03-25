@@ -18,7 +18,7 @@ const __dirname = dirname(__filename);
 
 // eslint-disable-next-line @typescript-eslint/require-await
 export const changelog: Hook<'update'> = async function () {
-  const debug = Debug([this.config.bin, '@jayree/sfdx-plugin-manifest', 'hooks', 'update'].join(':'));
+  const debug = Debug([this.config.bin, '@jayree/sfdx-plugin-source', 'hooks', 'update'].join(':'));
 
   // eslint-disable-next-line @typescript-eslint/no-misused-promises
   process.once('beforeExit', async () => {
