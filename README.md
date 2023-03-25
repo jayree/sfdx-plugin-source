@@ -19,6 +19,9 @@ sfdx plugins:install @jayree/sfdx-plugin-source
 <!-- commands -->
 * [`sfdx jayree:source:snapshot:compare`](#sfdx-jayreesourcesnapshotcompare)
 * [`sfdx jayree:source:snapshot:generate`](#sfdx-jayreesourcesnapshotgenerate)
+* [`sfdx jayree:source:tracking:list`](#sfdx-jayreesourcetrackinglist)
+* [`sfdx jayree:source:tracking:store:get`](#sfdx-jayreesourcetrackingstoreget)
+* [`sfdx jayree:source:tracking:store:set`](#sfdx-jayreesourcetrackingstoreset)
 
 ### `sfdx jayree:source:snapshot:compare`
 
@@ -53,4 +56,88 @@ GLOBAL FLAGS
 ```
 
 _See code: [src/commands/jayree/source/snapshot/generate.ts](https://github.com/jayree/sfdx-plugin-source/blob/v0.0.0/src/commands/jayree/source/snapshot/generate.ts)_
+
+### `sfdx jayree:source:tracking:list`
+
+list changes in a scratch org by remote revision counter number
+
+```
+USAGE
+  $ sfdx jayree:source:tracking:list -o <value> [--json] [--api-version <value>] [-r <value>]
+
+FLAGS
+  -o, --target-org=<value>  (required) Username or alias of the target org.
+  -r, --revision=<value>    start at a specific revision counter number
+  --api-version=<value>     Override the api version used for api requests made by this command
+
+GLOBAL FLAGS
+  --json  Format output as json.
+
+DESCRIPTION
+  list changes in a scratch org by remote revision counter number
+
+  list changes in a scratch org by remote revision counter number
+
+EXAMPLES
+  $ sfdx jayree:source:tracking:list
+  $ sfdx jayree:source:tracking:list -u me@my.org
+  $ sfdx jayree:source:tracking:list -u me@my.org -r 101
+```
+
+_See code: [src/commands/jayree/source/tracking/list.ts](https://github.com/jayree/sfdx-plugin-source/blob/v0.0.0/src/commands/jayree/source/tracking/list.ts)_
+
+### `sfdx jayree:source:tracking:store:get`
+
+get stored revision counter number
+
+```
+USAGE
+  $ sfdx jayree:source:tracking:store:get -o <value> [--json]
+
+FLAGS
+  -o, --target-org=<value>  (required) Username or alias of the target org.
+
+GLOBAL FLAGS
+  --json  Format output as json.
+
+DESCRIPTION
+  get stored revision counter number
+
+  get stored revision counter number
+
+EXAMPLES
+  $ sfdx jayree:source:tracking:store:get
+  $ sfdx jayree:source:tracking:store:get -u me@my.org
+```
+
+_See code: [src/commands/jayree/source/tracking/store/get.ts](https://github.com/jayree/sfdx-plugin-source/blob/v0.0.0/src/commands/jayree/source/tracking/store/get.ts)_
+
+### `sfdx jayree:source:tracking:store:set`
+
+store revision counter number
+
+```
+USAGE
+  $ sfdx jayree:source:tracking:store:set -o <value> [--json] [--api-version <value>] [-r <value>]
+
+FLAGS
+  -o, --target-org=<value>  (required) Username or alias of the target org.
+  -r, --revision=<value>    revision counter number (default: remote revision counter number)
+  --api-version=<value>     Override the api version used for api requests made by this command
+
+GLOBAL FLAGS
+  --json  Format output as json.
+
+DESCRIPTION
+  store revision counter number
+
+  store revision counter number
+
+EXAMPLES
+  $ sfdx jayree:source:tracking:store:set
+  $ sfdx jayree:source:tracking:store:set -u me@my.org
+  $ sfdx jayree:source:tracking:store:set -u MyTestOrg1 -r 101
+```
+
+_See code: [src/commands/jayree/source/tracking/store/set.ts](https://github.com/jayree/sfdx-plugin-source/blob/v0.0.0/src/commands/jayree/source/tracking/store/set.ts)_
 <!-- commandsstop -->

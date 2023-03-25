@@ -10,5 +10,23 @@
     "plugin": "@jayree/sfdx-plugin-source",
     "flags": ["filepath", "json"],
     "alias": []
+  },
+  {
+    "command": "jayree:source:tracking:list",
+    "plugin": "@jayree/sfdx-plugin-source",
+    "flags": ["api-version", "json", "revision", "target-org"],
+    "alias": []
+  },
+  {
+    "command": "jayree:source:tracking:store:get",
+    "plugin": "@jayree/sfdx-plugin-source",
+    "flags": ["json", "target-org"],
+    "alias": []
+  },
+  {
+    "command": "jayree:source:tracking:store:set",
+    "plugin": "@jayree/sfdx-plugin-source",
+    "flags": ["api-version", "json", "revision", "target-org"],
+    "alias": []
   }
 ]

@@ -1,0 +1,7 @@
+# commandDescription
+
+list changes in a scratch org by remote revision counter number
+
+# startrevision
+
+start at a specific revision counter number

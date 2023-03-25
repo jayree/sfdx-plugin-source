@@ -1,0 +1,7 @@
+# commandDescription
+
+store revision counter number
+
+# revision
+
+revision counter number (default: remote revision counter number)
