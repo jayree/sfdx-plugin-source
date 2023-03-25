@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/jayree/sfdx-plugin-source/compare/v1.0.0...v1.0.1) (2023-03-25)
+
+
+### Bug Fixes
+
+* changelog hook ([27c1349](https://github.com/jayree/sfdx-plugin-source/commit/27c1349537566080e64d4a77efebe73b6606944f))
+
 # 1.0.0 (2023-03-25)
 
 
