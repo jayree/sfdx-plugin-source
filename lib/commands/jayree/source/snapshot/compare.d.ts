@@ -1,17 +1,15 @@
-import { FlagsConfig } from '@salesforce/command';
-import { JayreeSfdxCommand } from '../../../../jayreeSfdxCommand.js';
-declare type CompareResponse = {
+import { SfCommand } from '@salesforce/sf-plugins-core';
+type CompareResponse = {
     addedMetadata?: string[];
     removedMetadata?: string[];
     modifiedMetadata?: string[];
 };
-export default class CompareSourceSnapshot extends JayreeSfdxCommand {
-    static description: string;
-    static examples: string[];
-    protected static flagsConfig: FlagsConfig;
-    protected static requiresUsername: boolean;
-    protected static supportsDevhubUsername: boolean;
-    protected static requiresProject: boolean;
+export default class CompareSourceSnapshot extends SfCommand<CompareResponse> {
+    static readonly summary: string;
+    static readonly flags: {
+        filepath: import("@oclif/core/lib/interfaces/parser.js").OptionFlag<string, import("@oclif/core/lib/interfaces/parser.js").CustomOptions>;
+    };
+    static readonly requiresProject = true;
     run(): Promise<CompareResponse>;
 }
 export {};

@@ -1,5 +1,0 @@
-{
-  "commandDescription": "generates sfdx source snapshot files",
-  "examples": [],
-  "filepath": "path to save the generated snapshot file"
-}

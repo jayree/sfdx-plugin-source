@@ -4,40 +4,46 @@
  * Licensed under the BSD 3-Clause license.
  * For full license text, see LICENSE.txt file in the repo root or https://opensource.org/licenses/BSD-3-Clause
  */
-import os from 'os';
-import { flags, FlagsConfig } from '@salesforce/command';
+import { dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { Flags, SfCommand } from '@salesforce/sf-plugins-core';
 import { Messages } from '@salesforce/core';
 import { AnyJson } from '@salesforce/ts-types';
 import fs from 'fs-extra';
-import { JayreeSfdxCommand } from '../../../../jayreeSfdxCommand.js';
+import { getParsedSourceComponents } from '../../../../utils/parse.js';
 
-Messages.importMessagesDirectory(new URL('./', import.meta.url).pathname);
+// eslint-disable-next-line no-underscore-dangle
+const __filename = fileURLToPath(import.meta.url);
+// eslint-disable-next-line no-underscore-dangle
+const __dirname = dirname(__filename);
+
+Messages.importMessagesDirectory(__dirname);
 
 const messages = Messages.loadMessages('@jayree/sfdx-plugin-source', 'generate');
 
-export default class GenerateSourceSnapshot extends JayreeSfdxCommand {
-  public static description = messages.getMessage('commandDescription');
+// eslint-disable-next-line sf-plugin/command-example
+export default class GenerateSourceSnapshot extends SfCommand<AnyJson> {
+  public static readonly summary = messages.getMessage('summary');
+  // public static readonly description = messages.getMessage('description');
 
-  public static examples = messages.getMessage('examples').split(os.EOL);
+  // public static readonly examples = messages.getMessages('examples');
 
-  protected static flagsConfig: FlagsConfig = {
-    filepath: flags.string({
-      description: messages.getMessage('filepath'),
+  public static readonly flags = {
+    filepath: Flags.string({
+      summary: messages.getMessage('flags.filepath.summary'),
       default: './sfdx-source-snapshot.json',
     }),
   };
 
-  protected static requiresUsername = false;
-  protected static supportsDevhubUsername = false;
-  protected static requiresProject = true;
+  public static readonly requiresProject = true;
 
   public async run(): Promise<AnyJson> {
-    const filePath = this.getFlag<string>('filepath');
+    const { flags } = await this.parse(GenerateSourceSnapshot);
 
-    const results = await this.getParsedSourceComponents();
+    const results = await getParsedSourceComponents(this.project.getPath());
 
-    await fs.writeJSON(filePath, results, { spaces: 4 });
-    this.ux.log(`Generated snapshot file "${filePath}"`);
+    await fs.writeJSON(flags.filepath, results, { spaces: 4 });
+    this.log(`Generated snapshot file "${flags.filepath}"`);
     return results;
   }
 }

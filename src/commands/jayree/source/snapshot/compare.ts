@@ -5,14 +5,21 @@
  * For full license text, see LICENSE.txt file in the repo root or https://opensource.org/licenses/BSD-3-Clause
  */
 import os from 'os';
-import { flags, FlagsConfig } from '@salesforce/command';
+import { dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { Flags, SfCommand } from '@salesforce/sf-plugins-core';
 import { Messages } from '@salesforce/core';
 import fs from 'fs-extra';
 import { detailedDiff } from 'deep-object-diff';
 import chalk from 'chalk';
-import { JayreeSfdxCommand } from '../../../../jayreeSfdxCommand.js';
+import { getParsedSourceComponents } from '../../../../utils/parse.js';
 
-Messages.importMessagesDirectory(new URL('./', import.meta.url).pathname);
+// eslint-disable-next-line no-underscore-dangle
+const __filename = fileURLToPath(import.meta.url);
+// eslint-disable-next-line no-underscore-dangle
+const __dirname = dirname(__filename);
+
+Messages.importMessagesDirectory(__dirname);
 
 const messages = Messages.loadMessages('@jayree/sfdx-plugin-source', 'compare');
 
@@ -22,27 +29,28 @@ type CompareResponse = {
   modifiedMetadata?: string[];
 };
 
-export default class CompareSourceSnapshot extends JayreeSfdxCommand {
-  public static description = messages.getMessage('commandDescription');
+// eslint-disable-next-line sf-plugin/command-example
+export default class CompareSourceSnapshot extends SfCommand<CompareResponse> {
+  public static readonly summary = messages.getMessage('summary');
+  // public static readonly description = messages.getMessage('description');
 
-  public static examples = messages.getMessage('examples').split(os.EOL);
+  // public static readonly examples = messages.getMessages('examples');
 
-  protected static flagsConfig: FlagsConfig = {
-    filepath: flags.string({
-      description: messages.getMessage('filepath'),
+  public static readonly flags = {
+    filepath: Flags.string({
+      summary: messages.getMessage('flags.filepath.summary'),
       default: './sfdx-source-snapshot.json',
     }),
   };
 
-  protected static requiresUsername = false;
-  protected static supportsDevhubUsername = false;
-  protected static requiresProject = true;
+  public static readonly requiresProject = true;
 
   // eslint-disable-next-line @typescript-eslint/require-await
   public async run(): Promise<CompareResponse> {
-    const orig = (await fs.readJSON('sfdx-source-snapshot.json')) as JSON;
+    const { flags } = await this.parse(CompareSourceSnapshot);
+    const orig = (await fs.readJSON(flags.filepath)) as JSON;
 
-    const results = await this.getParsedSourceComponents();
+    const results = await getParsedSourceComponents(this.project.getPath());
 
     const diff = detailedDiff(orig, results) as { added: object; deleted: object; updated: object };
 
@@ -51,33 +59,31 @@ export default class CompareSourceSnapshot extends JayreeSfdxCommand {
     const modifiedMetadata = Object.keys(diff.updated);
 
     if (addedMetadata.length === 0 && removedMetadata.length === 0 && modifiedMetadata.length === 0) {
-      this.ux.log('No changes have been detected.');
+      this.log('No changes have been detected.');
       return {};
     }
 
     process.exitCode = 1;
 
-    this.ux.log(
+    this.log(
       `The following source files have been modified: (${chalk.green('A')} added, ${chalk.red(
         'D'
       )} removed, ${chalk.yellow('M')} modified)${os.EOL}`
     );
 
     removedMetadata.forEach((metadata) => {
-      this.ux.log(chalk.red(`D\t${metadata}`));
+      this.log(chalk.red(`D\t${metadata}`));
     });
 
     addedMetadata.forEach((metadata) => {
-      this.ux.log(chalk.green(`A\t${metadata}`));
+      this.log(chalk.green(`A\t${metadata}`));
     });
 
     modifiedMetadata.forEach((metadata) => {
-      this.ux.log(chalk.yellow(`M\t${metadata}`));
+      this.log(chalk.yellow(`M\t${metadata}`));
     });
 
-    this.ux.log(
-      `${os.EOL}Source files differences detected. If intended, please update the snapshot file and run again.`
-    );
+    this.log(`${os.EOL}Source files differences detected. If intended, please update the snapshot file and run again.`);
 
     return { addedMetadata, removedMetadata, modifiedMetadata };
   }
