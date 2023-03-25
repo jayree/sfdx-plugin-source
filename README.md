@@ -73,11 +73,6 @@ FLAGS
 GLOBAL FLAGS
   --json  Format output as json.
 
-DESCRIPTION
-  list changes in a scratch org by remote revision counter number
-
-  list changes in a scratch org by remote revision counter number
-
 EXAMPLES
   $ sfdx jayree:source:tracking:list
   $ sfdx jayree:source:tracking:list -u me@my.org
@@ -99,11 +94,6 @@ FLAGS
 
 GLOBAL FLAGS
   --json  Format output as json.
-
-DESCRIPTION
-  get stored revision counter number
-
-  get stored revision counter number
 
 EXAMPLES
   $ sfdx jayree:source:tracking:store:get
@@ -127,11 +117,6 @@ FLAGS
 
 GLOBAL FLAGS
   --json  Format output as json.
-
-DESCRIPTION
-  store revision counter number
-
-  store revision counter number
 
 EXAMPLES
   $ sfdx jayree:source:tracking:store:set

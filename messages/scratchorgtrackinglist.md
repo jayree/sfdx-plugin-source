@@ -1,7 +1,7 @@
-# commandDescription
+# summary
 
 list changes in a scratch org by remote revision counter number
 
-# startrevision
+# flags.startrevision.summary
 
 start at a specific revision counter number

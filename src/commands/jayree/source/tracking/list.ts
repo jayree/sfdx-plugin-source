@@ -28,8 +28,8 @@ Messages.importMessagesDirectory(__dirname);
 const messages = Messages.loadMessages('@jayree/sfdx-plugin-source', 'scratchorgtrackinglist');
 
 export default class SourceTrackingList extends SfCommand<AnyJson> {
-  public static readonly summary = messages.getMessage('commandDescription');
-  public static readonly description = messages.getMessage('commandDescription');
+  public static readonly summary = messages.getMessage('summary');
+  // public static readonly description = messages.getMessage('description');
 
   public static readonly examples = [
     `$ sfdx jayree:source:tracking:list
@@ -42,7 +42,7 @@ $ sfdx jayree:source:tracking:list -u me@my.org -r 101`,
     'api-version': orgApiVersionFlagWithDeprecations,
     revision: Flags.integer({
       char: 'r',
-      summary: messages.getMessage('startrevision'),
+      summary: messages.getMessage('flags.startrevision.summary'),
       default: 0,
     }),
   };

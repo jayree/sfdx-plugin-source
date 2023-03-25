@@ -1,7 +1,7 @@
-# commandDescription
+# summary
 
 store revision counter number
 
-# revision
+# flags.revision.summary
 
 revision counter number (default: remote revision counter number)

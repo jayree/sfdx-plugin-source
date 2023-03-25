@@ -28,8 +28,8 @@ Messages.importMessagesDirectory(__dirname);
 const messages = Messages.loadMessages('@jayree/sfdx-plugin-source', 'scratchorgtrackingset');
 
 export default class ScratchOrgRevisionInfo extends SfCommand<AnyJson> {
-  public static readonly summary = messages.getMessage('commandDescription');
-  public static readonly description = messages.getMessage('commandDescription');
+  public static readonly summary = messages.getMessage('summary');
+  // public static readonly description = messages.getMessage('description');
 
   public static readonly examples = [
     `$ sfdx jayree:source:tracking:store:set
@@ -42,7 +42,7 @@ $ sfdx jayree:source:tracking:store:set -u MyTestOrg1 -r 101`,
     'api-version': orgApiVersionFlagWithDeprecations,
     revision: Flags.integer({
       char: 'r',
-      summary: messages.getMessage('revision'),
+      summary: messages.getMessage('flags.revision.summary'),
     }),
   };
 

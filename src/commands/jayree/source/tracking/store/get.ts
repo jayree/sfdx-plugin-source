@@ -23,8 +23,8 @@ Messages.importMessagesDirectory(__dirname);
 const messages = Messages.loadMessages('@jayree/sfdx-plugin-source', 'scratchorgtrackingget');
 
 export default class ScratchOrgRevisionInfo extends SfCommand<AnyJson> {
-  public static readonly summary = messages.getMessage('commandDescription');
-  public static readonly description = messages.getMessage('commandDescription');
+  public static readonly summary = messages.getMessage('summary');
+  // public static readonly description = messages.getMessage('description');
 
   public static readonly examples = [
     `$ sfdx jayree:source:tracking:store:get
