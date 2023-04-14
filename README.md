@@ -38,7 +38,7 @@ GLOBAL FLAGS
   --json  Format output as json.
 ```
 
-_See code: [src/commands/jayree/source/snapshot/compare.ts](https://github.com/jayree/sfdx-plugin-source/blob/v1.0.3/src/commands/jayree/source/snapshot/compare.ts)_
+_See code: [src/commands/jayree/source/snapshot/compare.ts](https://github.com/jayree/sfdx-plugin-source/blob/v1.0.4/src/commands/jayree/source/snapshot/compare.ts)_
 
 ### `sfdx jayree:source:snapshot:generate`
 
@@ -55,7 +55,7 @@ GLOBAL FLAGS
   --json  Format output as json.
 ```
 
-_See code: [src/commands/jayree/source/snapshot/generate.ts](https://github.com/jayree/sfdx-plugin-source/blob/v1.0.3/src/commands/jayree/source/snapshot/generate.ts)_
+_See code: [src/commands/jayree/source/snapshot/generate.ts](https://github.com/jayree/sfdx-plugin-source/blob/v1.0.4/src/commands/jayree/source/snapshot/generate.ts)_
 
 ### `sfdx jayree:source:tracking:list`
 
@@ -79,7 +79,7 @@ EXAMPLES
   $ sfdx jayree:source:tracking:list -u me@my.org -r 101
 ```
 
-_See code: [src/commands/jayree/source/tracking/list.ts](https://github.com/jayree/sfdx-plugin-source/blob/v1.0.3/src/commands/jayree/source/tracking/list.ts)_
+_See code: [src/commands/jayree/source/tracking/list.ts](https://github.com/jayree/sfdx-plugin-source/blob/v1.0.4/src/commands/jayree/source/tracking/list.ts)_
 
 ### `sfdx jayree:source:tracking:store:get`
 
@@ -100,7 +100,7 @@ EXAMPLES
   $ sfdx jayree:source:tracking:store:get -u me@my.org
 ```
 
-_See code: [src/commands/jayree/source/tracking/store/get.ts](https://github.com/jayree/sfdx-plugin-source/blob/v1.0.3/src/commands/jayree/source/tracking/store/get.ts)_
+_See code: [src/commands/jayree/source/tracking/store/get.ts](https://github.com/jayree/sfdx-plugin-source/blob/v1.0.4/src/commands/jayree/source/tracking/store/get.ts)_
 
 ### `sfdx jayree:source:tracking:store:set`
 
@@ -124,5 +124,5 @@ EXAMPLES
   $ sfdx jayree:source:tracking:store:set -u MyTestOrg1 -r 101
 ```
 
-_See code: [src/commands/jayree/source/tracking/store/set.ts](https://github.com/jayree/sfdx-plugin-source/blob/v1.0.3/src/commands/jayree/source/tracking/store/set.ts)_
+_See code: [src/commands/jayree/source/tracking/store/set.ts](https://github.com/jayree/sfdx-plugin-source/blob/v1.0.4/src/commands/jayree/source/tracking/store/set.ts)_
 <!-- commandsstop -->
