@@ -126,3 +126,10 @@ EXAMPLES
 
 _See code: [src/commands/jayree/source/tracking/store/set.ts](https://github.com/jayree/sfdx-plugin-source/blob/v1.0.5/src/commands/jayree/source/tracking/store/set.ts)_
 <!-- commandsstop -->
+
+## Hooks
+### prerun
+
+- Resets source tracking using `force:source:tracking:reset` before executing `force:source:pull` or `project:retrieve:start`.
+
+> **_IMPORTANT:_** This hook will only run if  `SFDX_ENABLE_JAYREE_HOOKS_RESET_BEFORE_PULL=true` is set. It uses the stored `serverMaxRevisionCounter` as revision counter number (see: [`jayree:source:tracking:store:set`](#sfdx-jayreesourcetrackingstoreset)). If the hook doesn't find a stored value it asks if the current *local* revision counter number should be stored and used.
