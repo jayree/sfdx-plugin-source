@@ -1,3 +1,15 @@
+# [1.1.0](https://github.com/jayree/sfdx-plugin-source/compare/v1.0.5...v1.1.0) (2023-04-21)
+
+
+### Bug Fixes
+
+* **deps:** bump @salesforce/sf-plugins-core from 2.2.8 to 2.2.9 ([#159](https://github.com/jayree/sfdx-plugin-source/issues/159)) ([63a0eab](https://github.com/jayree/sfdx-plugin-source/commit/63a0eabbc8fe2701c20c0fd33af6cb121df9ffcb))
+
+
+### Features
+
+* add prerun hook ([d89e259](https://github.com/jayree/sfdx-plugin-source/commit/d89e259bcc83a86a53a38360f9c92d8da546c71e))
+
 ## [1.0.5](https://github.com/jayree/sfdx-plugin-source/compare/v1.0.4...v1.0.5) (2023-04-16)
 
 
