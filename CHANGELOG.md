@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/jayree/sfdx-plugin-source/compare/v1.1.0...v1.1.1) (2023-04-22)
+
+
+### Bug Fixes
+
+* **deps:** bump @salesforce/source-deploy-retrieve from 8.0.1 to 8.0.2 ([#161](https://github.com/jayree/sfdx-plugin-source/issues/161)) ([82b7bb9](https://github.com/jayree/sfdx-plugin-source/commit/82b7bb98da9afec5f582cbbdb93a4ebf6f4fccb7))
+
 # [1.1.0](https://github.com/jayree/sfdx-plugin-source/compare/v1.0.5...v1.1.0) (2023-04-21)
 
 
