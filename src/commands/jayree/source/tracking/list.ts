@@ -29,7 +29,6 @@ const messages = Messages.loadMessages('@jayree/sfdx-plugin-source', 'scratchorg
 
 export default class SourceTrackingList extends SfCommand<AnyJson> {
   public static readonly summary = messages.getMessage('summary');
-  // public static readonly description = messages.getMessage('description');
 
   public static readonly examples = [
     `$ sfdx jayree:source:tracking:list

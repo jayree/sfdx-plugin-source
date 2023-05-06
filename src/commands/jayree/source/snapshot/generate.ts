@@ -24,9 +24,6 @@ const messages = Messages.loadMessages('@jayree/sfdx-plugin-source', 'generate')
 // eslint-disable-next-line sf-plugin/command-example
 export default class GenerateSourceSnapshot extends SfCommand<AnyJson> {
   public static readonly summary = messages.getMessage('summary');
-  // public static readonly description = messages.getMessage('description');
-
-  // public static readonly examples = messages.getMessages('examples');
 
   public static readonly flags = {
     filepath: Flags.string({
