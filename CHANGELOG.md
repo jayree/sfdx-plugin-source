@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/jayree/sfdx-plugin-source/compare/v1.2.0...v1.2.1) (2023-05-08)
+
+
+### Bug Fixes
+
+* fix description ([c7de80a](https://github.com/jayree/sfdx-plugin-source/commit/c7de80a1e8060478e262067b67a763de834549d4))
+
 # [1.2.0](https://github.com/jayree/sfdx-plugin-source/compare/v1.1.2...v1.2.0) (2023-05-08)
 
 
