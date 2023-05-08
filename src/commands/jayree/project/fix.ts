@@ -36,7 +36,7 @@ Coverage: 82%
     'target-org': optionalOrgFlagWithDeprecations,
     task: arrayWithDeprecation({
       char: 't',
-      summary: messages.getMessage('tag'),
+      summary: messages.getMessage('task'),
       aliases: ['tag'],
       deprecateAliases: true,
     }),

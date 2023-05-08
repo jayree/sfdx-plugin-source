@@ -2,6 +2,6 @@
 
 Fix retrieved metadata.
 
-# tag
+# task
 
-Comma-separated list of tag names listed in .sfdx-jayree.json.
+Comma-separated list of task names listed in sfdx-project.json.
