@@ -17,11 +17,33 @@ sfdx plugins:install @jayree/sfdx-plugin-source
 ## Commands
 
 <!-- commands -->
+* [`sfdx jayree:project:fix`](#sfdx-jayreeprojectfix)
 * [`sfdx jayree:source:snapshot:compare`](#sfdx-jayreesourcesnapshotcompare)
 * [`sfdx jayree:source:snapshot:generate`](#sfdx-jayreesourcesnapshotgenerate)
 * [`sfdx jayree:source:tracking:list`](#sfdx-jayreesourcetrackinglist)
 * [`sfdx jayree:source:tracking:store:get`](#sfdx-jayreesourcetrackingstoreget)
 * [`sfdx jayree:source:tracking:store:set`](#sfdx-jayreesourcetrackingstoreset)
+
+### `sfdx jayree:project:fix`
+
+Fix retrieved metadata.
+
+```
+USAGE
+  $ sfdx jayree:project:fix [--json] [-o <value>] [-t <value>]
+
+FLAGS
+  -o, --target-org=<value>
+  -t, --task=<value>...     Comma-separated list of tag names listed in .sfdx-jayree.json.
+
+GLOBAL FLAGS
+  --json  Format output as json.
+
+ALIASES
+  $ sfdx jayree:source:fix
+```
+
+_See code: [src/commands/jayree/project/fix.ts](https://github.com/jayree/sfdx-plugin-source/blob/v1.1.2/src/commands/jayree/project/fix.ts)_
 
 ### `sfdx jayree:source:snapshot:compare`
 
@@ -133,3 +155,43 @@ _See code: [src/commands/jayree/source/tracking/store/set.ts](https://github.com
 - Resets source tracking using `force:source:tracking:reset` before executing `force:source:pull` or `project:retrieve:start`.
 
 > **_IMPORTANT:_** This hook will only run if  `SFDX_ENABLE_JAYREE_HOOKS_RESET_BEFORE_PULL=true` is set. It uses the stored `serverMaxRevisionCounter` as revision counter number (see: [`jayree:source:tracking:store:set`](#sfdx-jayreesourcetrackingstoreset)). If the hook doesn't find a stored value it asks if the current *local* revision counter number should be stored and used.
+
+### scopedPreRetrieve
+
+- Disables the `prettierFormat` hook. See [sfdx-plugin-prettier](https://github.com/jayree/sfdx-plugin-prettier) for more details.
+
+### scopedPostRetrieve (plugin-source plugin) / postsourceupdate (legacy salesforce-alm plugin)
+
+- Applies source fixes of the `jayree project fix` command, deletes and moves source files to separate package directories. See the configuration file [sfdx-project.json](sfdx-project.json) for examples. Set `"isActive": true,´ to apply this fix during `scopedPostRetrieve` hook.
+
+> **_IMPORTANT:_** Since the hook is not able to update the (JSON) output of the command, an additional output is generated. Set the environment variable `SFDX_ENABLE_JAYREE_HOOKS_JSON_OUTPUT=true` and additional comma-separated JSON output will be appended, where the output must be parsed as an array, e.g. ``JSON.parse(`[${stdout}]`)``. See an example below:
+
+```javascript
+import execa from "execa";
+import { CliUx } from "@oclif/core";
+
+async function run() {
+  const { stdout } = await execa("sfdx", [
+    "force:source:retrieve",
+    "--metadata",
+    "Group:*",
+    "--json"
+  ]);
+  const parsedStdout = JSON.parse(`[${stdout}]`);
+  CliUx.ux.styledJSON(
+    parsedStdout.length > 1
+      ? {
+          ...parsedStdout[0],
+          result: {
+            ...parsedStdout[0].result,
+            fixedFiles: parsedStdout[1].fixedFiles
+          }
+        }
+      : parsedStdout[0]
+  );
+}
+
+run();
+```
+
+- Calls `prettierFormat` hook. See [sfdx-plugin-prettier](https://github.com/jayree/sfdx-plugin-prettier) for more details.

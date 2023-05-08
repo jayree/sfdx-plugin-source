@@ -1,5 +1,11 @@
 [
   {
+    "command": "jayree:project:fix",
+    "plugin": "@jayree/sfdx-plugin-source",
+    "flags": ["json", "target-org", "task"],
+    "alias": ["jayree:source:fix"]
+  },
+  {
     "command": "jayree:source:snapshot:compare",
     "plugin": "@jayree/sfdx-plugin-source",
     "flags": ["filepath", "json"],

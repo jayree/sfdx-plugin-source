@@ -1,0 +1,75 @@
+{
+  "packageDirectories": [
+    {
+      "path": "force-app",
+      "default": true
+    }
+  ],
+  "plugins": {
+    "@jayree/sfdx-plugin-source": {
+      "fixes": {
+        "customObjectTranslation.layouts": {
+          "isActive": true,
+          "files": {
+            "modify": {
+              "force-app/main/default/objectTranslations/Account-de/Account-de.objectTranslation-meta.xml": {
+                "delete": [
+                  "CustomObjectTranslation.layouts['layout','Account (Business) Layout']",
+                  "CustomObjectTranslation.layouts.?sections[['label','Rechnungs-/Versandadresse'],['section','Billing/Shipping Address']]"
+                ],
+                "insert": [
+                  {
+                    "path": "CustomObjectTranslation.layouts",
+                    "object": {
+                      "layout": "Account (Business1) Layout",
+                      "sections": {
+                        "label": "label",
+                        "section": "section"
+                      }
+                    },
+                    "at": 2
+                  }
+                ],
+                "set": [
+                  {
+                    "path": "CustomObjectTranslation.layouts['layout','Account (Household) Layout']",
+                    "object": {
+                      "layout": "Account (Household1) Layout",
+                      "sections": {
+                        "label": "label1",
+                        "section": "section1"
+                      }
+                    }
+                  },
+                  {
+                    "path": "CustomObjectTranslation.layouts['layout','Account (Individual) Layout'].layout",
+                    "value": "Account (Individual1) Layout"
+                  },
+                  {
+                    "path": "CustomObjectTranslation.layouts.layout['Account (Institution) Layout']",
+                    "value": "Account (Institution1) Layout"
+                  },
+                  {
+                    "path": "CustomObjectTranslation.layouts.?layout['Account (Policyholder) Layout']",
+                    "object": {
+                      "layout": "Account (Policyholder1) Layout"
+                    }
+                  }
+                ]
+              }
+            },
+            "move": [
+              [
+                "force-app/main/default/objectTranslations/Activity-de/Activity-de.objectTranslation-meta.xml",
+                "force-app/main/default/objectTranslations/Activity-de/Activity-de1.objectTranslation-meta.xml"
+              ]
+            ],
+            "delete": [
+              "force-app/main/default/objectTranslations/AccountContactRelation-de/AccountContactRelation-de.objectTranslation-meta.xml"
+            ]
+          }
+        }
+      }
+    }
+  }
+}
