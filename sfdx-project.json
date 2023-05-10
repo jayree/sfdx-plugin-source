@@ -6,7 +6,7 @@
     }
   ],
   "plugins": {
-    "@jayree/sfdx-plugin-source": {
+    "jayree/sfdx-plugin-source": {
       "fixes": {
         "customObjectTranslation.layouts": {
           "isActive": true,

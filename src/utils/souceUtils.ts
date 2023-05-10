@@ -515,18 +515,18 @@ async function readFixesFromProject(projectDir?: string): Promise<FixConfig> {
   const proj = await SfProject.resolve(projectDir);
   const projJson = (await proj.resolveProjectConfig()) as {
     plugins?: {
-      '@jayree/sfdx-plugin-source'?: {
+      'jayree/sfdx-plugin-source'?: {
         fixes?: FixConfig;
       };
-      '@jayree/sfdx-plugin-project'?: {
+      'jayree/sfdx-plugin-project'?: {
         fixes?: FixConfig;
       };
     };
   };
 
   return (
-    projJson.plugins?.['@jayree/sfdx-plugin-project']?.fixes ??
-    projJson.plugins?.['@jayree/sfdx-plugin-source']?.fixes ??
+    projJson.plugins?.['jayree/sfdx-plugin-project']?.fixes ??
+    projJson.plugins?.['jayree/sfdx-plugin-source']?.fixes ??
     {}
   );
 }
