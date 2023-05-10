@@ -1,3 +1,10 @@
+## [1.2.2](https://github.com/jayree/sfdx-plugin-source/compare/v1.2.1...v1.2.2) (2023-05-10)
+
+
+### Bug Fixes
+
+* remove at from sfdx-project property ([b91fd6d](https://github.com/jayree/sfdx-plugin-source/commit/b91fd6d8c72e3cc17e836d11c84ee58da7eb6eba))
+
 ## [1.2.1](https://github.com/jayree/sfdx-plugin-source/compare/v1.2.0...v1.2.1) (2023-05-08)
 
 
