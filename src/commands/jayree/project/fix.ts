@@ -18,7 +18,7 @@ const __dirname = dirname(__filename);
 
 Messages.importMessagesDirectory(__dirname);
 
-const messages = Messages.loadMessages('@jayree/sfdx-plugin-source', 'sourceretrievefix');
+const messages = Messages.loadMessages('@jayree/sfdx-plugin-source', 'sourcefix');
 
 // eslint-disable-next-line sf-plugin/command-example
 export default class FixMetadata extends SfCommand<AnyJson> {

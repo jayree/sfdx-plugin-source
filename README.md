@@ -17,12 +17,32 @@ sfdx plugins:install @jayree/sfdx-plugin-source
 ## Commands
 
 <!-- commands -->
+* [`sfdx jayree:project:compare:snapshot`](#sfdx-jayreeprojectcomparesnapshot)
 * [`sfdx jayree:project:fix`](#sfdx-jayreeprojectfix)
-* [`sfdx jayree:source:snapshot:compare`](#sfdx-jayreesourcesnapshotcompare)
-* [`sfdx jayree:source:snapshot:generate`](#sfdx-jayreesourcesnapshotgenerate)
-* [`sfdx jayree:source:tracking:list`](#sfdx-jayreesourcetrackinglist)
-* [`sfdx jayree:source:tracking:store:get`](#sfdx-jayreesourcetrackingstoreget)
-* [`sfdx jayree:source:tracking:store:set`](#sfdx-jayreesourcetrackingstoreset)
+* [`sfdx jayree:project:generate:snapshot`](#sfdx-jayreeprojectgeneratesnapshot)
+* [`sfdx jayree:project:list:tracking`](#sfdx-jayreeprojectlisttracking)
+* [`sfdx jayree:project:store:tracking:get`](#sfdx-jayreeprojectstoretrackingget)
+* [`sfdx jayree:project:store:tracking:set`](#sfdx-jayreeprojectstoretrackingset)
+
+### `sfdx jayree:project:compare:snapshot`
+
+Compare sfdx source snapshot files.
+
+```
+USAGE
+  $ sfdx jayree:project:compare:snapshot [--json] [--filepath <value>]
+
+FLAGS
+  --filepath=<value>  [default: ./sfdx-source-snapshot.json] Path of the generated snapshot file.
+
+GLOBAL FLAGS
+  --json  Format output as json.
+
+ALIASES
+  $ sfdx jayree:source:snapshot:compare
+```
+
+_See code: [src/commands/jayree/project/compare/snapshot.ts](https://github.com/jayree/sfdx-plugin-source/blob/v1.2.4/src/commands/jayree/project/compare/snapshot.ts)_
 
 ### `sfdx jayree:project:fix`
 
@@ -34,7 +54,7 @@ USAGE
 
 FLAGS
   -o, --target-org=<value>
-  -t, --task=<value>...     Comma-separated list of task names listed in sfdx-project.json.
+  -t, --task=<value>...     Task name(s) listed in sfdx-project.json.
 
 GLOBAL FLAGS
   --json  Format output as json.
@@ -45,55 +65,44 @@ ALIASES
 
 _See code: [src/commands/jayree/project/fix.ts](https://github.com/jayree/sfdx-plugin-source/blob/v1.2.4/src/commands/jayree/project/fix.ts)_
 
-### `sfdx jayree:source:snapshot:compare`
+### `sfdx jayree:project:generate:snapshot`
 
-compares sfdx source snapshot files
+Generate sfdx source snapshot files.
 
 ```
 USAGE
-  $ sfdx jayree:source:snapshot:compare [--json] [--filepath <value>]
+  $ sfdx jayree:project:generate:snapshot [--json] [--filepath <value>]
 
 FLAGS
-  --filepath=<value>  [default: ./sfdx-source-snapshot.json] path of the generated snapshot file
+  --filepath=<value>  [default: ./sfdx-source-snapshot.json] Path to save the generated snapshot file.
 
 GLOBAL FLAGS
   --json  Format output as json.
+
+ALIASES
+  $ sfdx jayree:source:snapshot:generate
 ```
 
-_See code: [src/commands/jayree/source/snapshot/compare.ts](https://github.com/jayree/sfdx-plugin-source/blob/v1.2.4/src/commands/jayree/source/snapshot/compare.ts)_
+_See code: [src/commands/jayree/project/generate/snapshot.ts](https://github.com/jayree/sfdx-plugin-source/blob/v1.2.4/src/commands/jayree/project/generate/snapshot.ts)_
 
-### `sfdx jayree:source:snapshot:generate`
+### `sfdx jayree:project:list:tracking`
 
-generates sfdx source snapshot files
-
-```
-USAGE
-  $ sfdx jayree:source:snapshot:generate [--json] [--filepath <value>]
-
-FLAGS
-  --filepath=<value>  [default: ./sfdx-source-snapshot.json] path to save the generated snapshot file
-
-GLOBAL FLAGS
-  --json  Format output as json.
-```
-
-_See code: [src/commands/jayree/source/snapshot/generate.ts](https://github.com/jayree/sfdx-plugin-source/blob/v1.2.4/src/commands/jayree/source/snapshot/generate.ts)_
-
-### `sfdx jayree:source:tracking:list`
-
-list changes in a scratch org by remote revision counter number
+List changes in a scratch org by remote revision counter number.
 
 ```
 USAGE
-  $ sfdx jayree:source:tracking:list -o <value> [--json] [--api-version <value>] [-r <value>]
+  $ sfdx jayree:project:list:tracking -o <value> [--json] [--api-version <value>] [-r <value>]
 
 FLAGS
   -o, --target-org=<value>  (required) Username or alias of the target org.
-  -r, --revision=<value>    start at a specific revision counter number
+  -r, --revision=<value>    Start at a specific revision counter number.
   --api-version=<value>     Override the api version used for api requests made by this command
 
 GLOBAL FLAGS
   --json  Format output as json.
+
+ALIASES
+  $ sfdx jayree:source:tracking:list
 
 EXAMPLES
   $ sfdx jayree:source:tracking:list
@@ -101,44 +110,50 @@ EXAMPLES
   $ sfdx jayree:source:tracking:list -u me@my.org -r 101
 ```
 
-_See code: [src/commands/jayree/source/tracking/list.ts](https://github.com/jayree/sfdx-plugin-source/blob/v1.2.4/src/commands/jayree/source/tracking/list.ts)_
+_See code: [src/commands/jayree/project/list/tracking.ts](https://github.com/jayree/sfdx-plugin-source/blob/v1.2.4/src/commands/jayree/project/list/tracking.ts)_
 
-### `sfdx jayree:source:tracking:store:get`
+### `sfdx jayree:project:store:tracking:get`
 
-get stored revision counter number
+Get stored revision counter number.
 
 ```
 USAGE
-  $ sfdx jayree:source:tracking:store:get -o <value> [--json]
+  $ sfdx jayree:project:store:tracking:get -o <value> [--json]
 
 FLAGS
   -o, --target-org=<value>  (required) Username or alias of the target org.
 
 GLOBAL FLAGS
   --json  Format output as json.
+
+ALIASES
+  $ sfdx jayree:source:tracking:store:get
 
 EXAMPLES
   $ sfdx jayree:source:tracking:store:get
   $ sfdx jayree:source:tracking:store:get -u me@my.org
 ```
 
-_See code: [src/commands/jayree/source/tracking/store/get.ts](https://github.com/jayree/sfdx-plugin-source/blob/v1.2.4/src/commands/jayree/source/tracking/store/get.ts)_
+_See code: [src/commands/jayree/project/store/tracking/get.ts](https://github.com/jayree/sfdx-plugin-source/blob/v1.2.4/src/commands/jayree/project/store/tracking/get.ts)_
 
-### `sfdx jayree:source:tracking:store:set`
+### `sfdx jayree:project:store:tracking:set`
 
-store revision counter number
+Store revision counter number.
 
 ```
 USAGE
-  $ sfdx jayree:source:tracking:store:set -o <value> [--json] [--api-version <value>] [-r <value>]
+  $ sfdx jayree:project:store:tracking:set -o <value> [--json] [--api-version <value>] [-r <value>]
 
 FLAGS
   -o, --target-org=<value>  (required) Username or alias of the target org.
-  -r, --revision=<value>    revision counter number (default: remote revision counter number)
+  -r, --revision=<value>    Revision counter number (default: remote revision counter number).
   --api-version=<value>     Override the api version used for api requests made by this command
 
 GLOBAL FLAGS
   --json  Format output as json.
+
+ALIASES
+  $ sfdx jayree:source:tracking:store:set
 
 EXAMPLES
   $ sfdx jayree:source:tracking:store:set
@@ -146,7 +161,7 @@ EXAMPLES
   $ sfdx jayree:source:tracking:store:set -u MyTestOrg1 -r 101
 ```
 
-_See code: [src/commands/jayree/source/tracking/store/set.ts](https://github.com/jayree/sfdx-plugin-source/blob/v1.2.4/src/commands/jayree/source/tracking/store/set.ts)_
+_See code: [src/commands/jayree/project/store/tracking/set.ts](https://github.com/jayree/sfdx-plugin-source/blob/v1.2.4/src/commands/jayree/project/store/tracking/set.ts)_
 <!-- commandsstop -->
 
 ## Hooks

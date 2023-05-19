@@ -1,7 +1,7 @@
 # summary
 
-compares sfdx source snapshot files
+Compare sfdx source snapshot files.
 
 # flags.filepath.summary
 
-path of the generated snapshot file
+Path of the generated snapshot file.

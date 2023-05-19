@@ -1,7 +1,7 @@
 # summary
 
-generates sfdx source snapshot files
+Generate sfdx source snapshot files.
 
 # flags.filepath.summary
 
-path to save the generated snapshot file
+Path to save the generated snapshot file.
