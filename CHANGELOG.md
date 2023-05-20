@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/jayree/sfdx-plugin-source/compare/v1.2.4...v1.3.0) (2023-05-20)
+
+
+### Features
+
+* align topics with sf topics ([acb11ae](https://github.com/jayree/sfdx-plugin-source/commit/acb11aedf5941066179b01733bd35686a19b0e91))
+
 ## [1.2.4](https://github.com/jayree/sfdx-plugin-source/compare/v1.2.3...v1.2.4) (2023-05-19)
 
 
