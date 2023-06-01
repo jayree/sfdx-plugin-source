@@ -8,7 +8,7 @@
 import { join } from 'path';
 import fs from 'fs-extra';
 import { SfProject, SfError, Lifecycle } from '@salesforce/core';
-import { FixConfig } from './types';
+import { FixConfig } from './types.js';
 
 export type Config = {
   [index: string]: FixConfig | { [label: string]: FixConfig } | string[] | boolean;
