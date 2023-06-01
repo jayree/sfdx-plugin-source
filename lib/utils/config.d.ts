@@ -1,4 +1,4 @@
-import { FixConfig } from './types';
+import { FixConfig } from './types.js';
 export type Config = {
     [index: string]: FixConfig | {
         [label: string]: FixConfig;
