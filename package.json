@@ -1,7 +1,7 @@
 {
   "name": "@jayree/sfdx-plugin-source",
   "description": "A Salesforce CLI plugin containing commands to generate and compare sfdx source snapshot files or manipulate local source tracking.",
-  "version": "1.3.6",
+  "version": "1.3.7",
   "author": "jayree",
   "type": "module",
   "bugs": "https://github.com/jayree/sfdx-plugin-source/issues",
