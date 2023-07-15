@@ -23,9 +23,9 @@ async function getConnectionFromArgv(argv: string[]): Promise<{
   while (argv.length && aliasOrUsername?.length === 0) {
     const input = argv.shift();
     if (
-      input?.startsWith('-u') ||
-      input?.startsWith('--targetusername') ||
-      input?.startsWith('-o') ||
+      input?.startsWith('-u') ??
+      input?.startsWith('--targetusername') ??
+      input?.startsWith('-o') ??
       input?.startsWith('--target-org')
     ) {
       const i = input.indexOf('=');
