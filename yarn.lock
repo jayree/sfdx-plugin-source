@@ -1046,14 +1046,15 @@
     proxy-agent "^6.2.2"
     unzipper "0.10.14"
 
-"@salesforce/source-tracking@^4.2.6":
-  version "4.2.6"
-  resolved "https://registry.yarnpkg.com/@salesforce/source-tracking/-/source-tracking-4.2.6.tgz#b28f99d26983d370a9b1da40093a14797d711c71"
-  integrity sha512-ZL4a8Fouof16QviacuMS3XLmH5GUTm4yw48xtf0eeHy4/Ggbrf2SvZXdJM6YkORfMG78rxXDNfIjg5q+3SQO2A==
+"@salesforce/source-tracking@^4.2.9":
+  version "4.2.9"
+  resolved "https://registry.yarnpkg.com/@salesforce/source-tracking/-/source-tracking-4.2.9.tgz#6f64b33d5ab9e3de9c82a0b09a652266dccc5ac1"
+  integrity sha512-RskbDf1hiKlZjfXpJ6YkEaGyQ1x8gU/vBLViMEfwdqrWhdfffqS++vRrf1aecUZRFYIXgheSw5gR+aQBY7bmoA==
   dependencies:
     "@salesforce/core" "^4.3.11"
     "@salesforce/kit" "^3.0.6"
     "@salesforce/source-deploy-retrieve" "^9.4.2"
+    "@salesforce/ts-types" "^2.0.5"
     fast-xml-parser "^4.2.5"
     graceful-fs "^4.2.11"
     isomorphic-git "1.23.0"
