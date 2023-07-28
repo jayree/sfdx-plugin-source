@@ -16,7 +16,7 @@
     "globby": "^13.2.2",
     "ignore": "^5.2.4",
     "object-path": "^0.11.8",
-    "tslib": "^2.6.0"
+    "tslib": "^2.6.1"
   },
   "devDependencies": {
     "@oclif/plugin-command-snapshot": "^4.0.9",
