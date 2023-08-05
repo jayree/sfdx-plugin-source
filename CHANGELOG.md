@@ -1,3 +1,10 @@
+## [1.3.13](https://github.com/jayree/sfdx-plugin-source/compare/v1.3.12...v1.3.13) (2023-08-05)
+
+
+### Bug Fixes
+
+* **deps:** bump @salesforce/sf-plugins-core from 3.1.12 to 3.1.13 ([#314](https://github.com/jayree/sfdx-plugin-source/issues/314)) ([2eadbcb](https://github.com/jayree/sfdx-plugin-source/commit/2eadbcbf737412ffe1f2d768260aef15b8bc3c12))
+
 ## [1.3.12](https://github.com/jayree/sfdx-plugin-source/compare/v1.3.11...v1.3.12) (2023-08-04)
 
 
