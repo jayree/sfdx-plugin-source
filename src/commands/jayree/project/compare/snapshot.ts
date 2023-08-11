@@ -67,8 +67,8 @@ export default class CompareSourceSnapshot extends SfCommand<CompareResponse> {
 
     this.log(
       `The following source files have been modified: (${chalk.green('A')} added, ${chalk.red(
-        'D'
-      )} removed, ${chalk.yellow('M')} modified)${os.EOL}`
+        'D',
+      )} removed, ${chalk.yellow('M')} modified)${os.EOL}`,
     );
 
     removedMetadata.forEach((metadata) => {
