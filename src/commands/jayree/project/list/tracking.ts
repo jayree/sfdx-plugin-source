@@ -41,7 +41,7 @@ $ sfdx jayree:source:tracking:list -u me@my.org -r 101`,
     'api-version': orgApiVersionFlagWithDeprecations,
     revision: Flags.integer({
       char: 'r',
-      summary: messages.getMessage('flags.startrevision.summary'),
+      summary: messages.getMessage('flags.revision.summary'),
       default: 0,
     }),
   };
