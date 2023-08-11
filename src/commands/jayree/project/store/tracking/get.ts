@@ -47,9 +47,9 @@ $ sfdx jayree:source:tracking:store:get -u me@my.org`,
       await getCurrentStateFolderFilePath(
         this.project.getPath(),
         join('orgs', org.getOrgId(), 'jayreeStoredMaxRevision.json'),
-        true
+        true,
       ),
-      { throws: false }
+      { throws: false },
     )) as { serverMaxRevisionCounter: number };
     this.styledHeader(chalk.blue('Get stored SourceMember revision counter number'));
     this.table(
@@ -73,7 +73,7 @@ $ sfdx jayree:source:tracking:store:get -u me@my.org`,
           header: 'RevisionCounter',
           get: (row) => row.serverMaxRevisionCounter,
         },
-      }
+      },
     );
     return {
       revision: serverMaxRevisionCounter,

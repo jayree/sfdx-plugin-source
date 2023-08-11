@@ -14,7 +14,7 @@ const debug = Debug('jayree:state:folder');
 export async function getCurrentStateFolderFilePath(
   projectPath: string,
   file: string,
-  migrate: boolean
+  migrate: boolean,
 ): Promise<string> {
   const sfdxPath = path.join(projectPath, '.sfdx', file);
   const sfPath = path.join(projectPath, '.sf', file);

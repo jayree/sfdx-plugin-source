@@ -135,7 +135,7 @@ class ObjectPathResolver {
     currenpath: string,
     currentvalue: object[],
     key: string[],
-    value: string | string[]
+    value: string | string[],
   ): string[] {
     const matchingPath: string[] = [];
 

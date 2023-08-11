@@ -58,7 +58,7 @@ $ sfdx jayree:source:tracking:store:set -u MyTestOrg1 -r 101`,
     const {
       records: [{ maxCounter, maxNum }],
     } = await conn.tooling.query<{ maxCounter: number; maxNum: number }>(
-      'SELECT MAX(RevisionCounter) maxCounter,MAX(RevisionNum) maxNum from SourceMember'
+      'SELECT MAX(RevisionCounter) maxCounter,MAX(RevisionNum) maxNum from SourceMember',
     );
 
     let maxRev = maxCounter >= maxNum ? maxCounter : maxNum;
@@ -70,7 +70,7 @@ $ sfdx jayree:source:tracking:store:set -u MyTestOrg1 -r 101`,
     const storedmaxrevpath = await getCurrentStateFolderFilePath(
       this.project.getPath(),
       join('orgs', org.getOrgId(), 'jayreeStoredMaxRevision.json'),
-      true
+      true,
     );
 
     const newMaxRev: number = (flags['revision'] as number) >= 0 ? (flags['revision'] as number) : maxRev;
@@ -100,7 +100,7 @@ $ sfdx jayree:source:tracking:store:set -u MyTestOrg1 -r 101`,
           header: 'RevisionCounter',
           get: (row) => row.serverMaxRevisionCounter,
         },
-      }
+      },
     );
 
     return {

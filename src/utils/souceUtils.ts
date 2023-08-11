@@ -140,7 +140,7 @@ export async function profileElementInjection(profiles: string[], customObjectsF
               custom: '',
               objectPermissions: [],
               userPermissions: [],
-            }
+            },
           );
         write(file, data);
         debug({
@@ -292,7 +292,7 @@ function fnInsert<T extends object>(
     at: number;
   }>,
   file: string,
-  data: JsonMap
+  data: JsonMap,
 ): fixResult[] {
   const array = [];
   for (const inserttask of fninsert) {
@@ -304,7 +304,7 @@ function fnInsert<T extends object>(
           if (typeof inserttaskpath !== 'undefined') {
             if (
               JSON.stringify(objectPath.get(data, inserttaskpath)).includes(
-                JSON.stringify(inserttask.object).replace('{', '').replace('}', '')
+                JSON.stringify(inserttask.object).replace('{', '').replace('}', ''),
               )
             ) {
               match = inserttaskpath;
@@ -349,21 +349,21 @@ async function updateValue(value: string): Promise<string> {
       value = JSON.parse(
         JSON.stringify(value).replace(
           /<mydomain>/i,
-          (await getConnectionFromArgv())?.instanceUrl.substring(8).split('.')[0] ?? 'no connection'
-        )
+          (await getConnectionFromArgv())?.instanceUrl.substring(8).split('.')[0] ?? 'no connection',
+        ),
       ) as string;
     }
     if (JSON.stringify(value).includes('<instance>')) {
       value = JSON.parse(
         JSON.stringify(value).replace(
           /<instance>/i,
-          (await getConnectionFromArgv())?.instanceUrl.substring(8).split('.')[1] ?? 'no connection'
-        )
+          (await getConnectionFromArgv())?.instanceUrl.substring(8).split('.')[1] ?? 'no connection',
+        ),
       ) as string;
     }
     if (JSON.stringify(value).includes('<username>')) {
       value = JSON.parse(
-        JSON.stringify(value).replace(/<username>/i, (await getConnectionFromArgv())?.getUsername() as string)
+        JSON.stringify(value).replace(/<username>/i, (await getConnectionFromArgv())?.getUsername() as string),
       ) as string;
     }
   }
@@ -410,7 +410,7 @@ async function fnSet<T extends object>(
     object: T;
   }>,
   file: string,
-  data: JsonMap
+  data: JsonMap,
 ): Promise<fixResult[]> {
   const array = [];
   for await (const settask of fnset) {
@@ -477,7 +477,7 @@ async function sourcefix<T extends object>(
       }
     | undefined,
   root: string,
-  filter: string[]
+  filter: string[],
 ): Promise<fixResult[]> {
   let array: fixResult[] = [];
   if (fixsources) {
@@ -537,8 +537,8 @@ export async function getFixes(tags: string[], onlyActive: boolean): Promise<Fix
     const allTasks = await readFixesFromProject(await getProjectPath());
     return Object.fromEntries(
       Object.entries(allTasks).filter(
-        ([taskName, taskConfig]) => (tags.includes(taskName) || !tags.length) && (!onlyActive || taskConfig.isActive)
-      )
+        ([taskName, taskConfig]) => (tags.includes(taskName) || !tags.length) && (!onlyActive || taskConfig.isActive),
+      ),
     );
   } else {
     const fixesWithoutLabel: FixConfig = {};
@@ -592,7 +592,7 @@ export async function applyFixes(fixes: FixConfig, filter: string[] = []): Promi
 export async function updateProfiles(
   profiles: FileResponse[],
   customObjects: FileResponse[],
-  forceSourcePull: boolean
+  forceSourcePull: boolean,
 ): Promise<void> {
   if (forceSourcePull) {
     debug('force:source:pull detected');
@@ -655,6 +655,6 @@ export async function updateProfiles(
   debug({ profiles, customObjectsFilter });
   await profileElementInjection(
     profiles.map((profile) => profile.filePath as string).filter(Boolean),
-    customObjectsFilter
+    customObjectsFilter,
   );
 }
