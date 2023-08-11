@@ -66,7 +66,7 @@ export const scopedPostRetrieve: HookFunction = async function (options) {
     if (Object.keys(fixes).length) {
       const updatedfiles = await applyFixes(
         fixes,
-        result.map((el) => el.filePath)
+        result.map((el) => el.filePath),
       );
       debug({ updatedfiles });
 
@@ -90,7 +90,7 @@ export const scopedPostRetrieve: HookFunction = async function (options) {
       result.forEach((element) => {
         if (!removed.includes(element.filePath)) {
           inboundFiles.push(
-            path.relative(projectPath, moved[element.filePath] ? moved[element.filePath] : element.filePath)
+            path.relative(projectPath, moved[element.filePath] ? moved[element.filePath] : element.filePath),
           );
         }
       });

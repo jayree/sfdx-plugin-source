@@ -41,7 +41,7 @@ $ sfdx jayree:source:tracking:list -u me@my.org -r 101`,
     'api-version': orgApiVersionFlagWithDeprecations,
     revision: Flags.integer({
       char: 'r',
-      summary: messages.getMessage('flags.startrevision.summary'),
+      summary: messages.getMessage('flags.revision.summary'),
       default: 0,
     }),
   };
@@ -59,14 +59,14 @@ $ sfdx jayree:source:tracking:list -u me@my.org -r 101`,
     const {
       records: [{ maxCounter, maxNum }],
     } = await conn.tooling.query<{ maxCounter: number; maxNum: number }>(
-      'SELECT MAX(RevisionCounter) maxCounter,MAX(RevisionNum) maxNum from SourceMember'
+      'SELECT MAX(RevisionCounter) maxCounter,MAX(RevisionNum) maxNum from SourceMember',
     );
 
     const maxRev = maxCounter >= maxNum ? maxCounter : maxNum;
     const maxrevpath = await getCurrentStateFolderFilePath(
       this.project.getPath(),
       join('orgs', org.getOrgId(), 'maxRevision.json'),
-      false
+      false,
     );
 
     let maxrevfile: number;
@@ -79,11 +79,11 @@ $ sfdx jayree:source:tracking:list -u me@my.org -r 101`,
       if (Object.keys(json.sourceMembers).length > 0) {
         maxrevfile = Math.max(
           0,
-          ...Object.keys(json.sourceMembers).map((key) => json.sourceMembers[key].lastRetrievedFromServer)
+          ...Object.keys(json.sourceMembers).map((key) => json.sourceMembers[key].lastRetrievedFromServer),
         );
         if (maxrevfile === 0) {
           maxrevfile = Math.min(
-            ...Object.keys(json.sourceMembers).map((key) => json.sourceMembers[key].serverRevisionCounter)
+            ...Object.keys(json.sourceMembers).map((key) => json.sourceMembers[key].serverRevisionCounter),
           );
           if (maxrevfile !== 0) {
             maxrevfile = maxrevfile - 1;
@@ -104,10 +104,10 @@ $ sfdx jayree:source:tracking:list -u me@my.org -r 101`,
         await getCurrentStateFolderFilePath(
           this.project.getPath(),
           join('orgs', org.getOrgId(), 'jayreeStoredMaxRevision.json'),
-          true
+          true,
         ),
 
-        { throws: false }
+        { throws: false },
       )) as { serverMaxRevisionCounter: number };
       storedServerMaxRevisionCounter = serverMaxRevisionCounter;
       // eslint-disable-next-line no-empty
@@ -123,7 +123,7 @@ $ sfdx jayree:source:tracking:list -u me@my.org -r 101`,
     }>(
       `SELECT RevisionCounter,RevisionNum,Id,MemberType,MemberName,IsNameObsolete from SourceMember where RevisionCounter >= ${
         flags.revision > 0 ? flags.revision : storedServerMaxRevisionCounter ? storedServerMaxRevisionCounter : 0
-      }`
+      }`,
     );
 
     let sourceMemberResults: Array<{
@@ -154,7 +154,7 @@ $ sfdx jayree:source:tracking:list -u me@my.org -r 101`,
             RevisionCounter === maxrevfile ? ' [local]' : ''
           }${RevisionCounter === storedServerMaxRevisionCounter ? ' [stored]' : ''}`,
         };
-      }
+      },
     );
 
     if (!sourceMemberResults.find((SourceMember) => SourceMember.RevisionCounter === maxrevfile)) {
@@ -194,7 +194,7 @@ $ sfdx jayree:source:tracking:list -u me@my.org -r 101`,
     });
 
     this.styledHeader(
-      chalk.blue(`SourceMember revision counter numbers list for: ${org.getUsername()}/${org.getOrgId()}`)
+      chalk.blue(`SourceMember revision counter numbers list for: ${org.getUsername()}/${org.getOrgId()}`),
     );
     this.table(sourceMemberResults, {
       REVISIONCOUNTER: {

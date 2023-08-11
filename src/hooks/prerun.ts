@@ -43,7 +43,7 @@ async function getConnectionFromArgv(argv: string[]): Promise<{
       aliasOrUsername = aggregator.getPropertyValue('target-org')?.toString();
     } catch {
       throw new Error(
-        'This command requires a username to apply <mydomain> or <username>. Specify it with the -u (-o) parameter or with the "sfdx config:set defaultusername=<username>" command.'
+        'This command requires a username to apply <mydomain> or <username>. Specify it with the -u (-o) parameter or with the "sfdx config:set defaultusername=<username>" command.',
       );
     }
   }
@@ -66,7 +66,7 @@ export const prerun: Hook<'prerun'> = async function (options) {
         storedServerMaxRevisionCounterPath = await getCurrentStateFolderFilePath(
           projectPath,
           path.join('orgs', org.getOrgId(), 'jayreeStoredMaxRevision.json'),
-          true
+          true,
         );
 
         try {
@@ -99,8 +99,8 @@ export const prerun: Hook<'prerun'> = async function (options) {
               await getCurrentStateFolderFilePath(
                 projectPath,
                 path.join('orgs', (await Org.create({ aliasOrUsername: userName })).getOrgId(), 'maxRevision.json'),
-                false
-              )
+                false,
+              ),
             )) as { serverMaxRevisionCounter: number };
             localServerMaxRevisionCounter = serverMaxRevisionCounter;
           } catch (error) {
@@ -110,8 +110,8 @@ export const prerun: Hook<'prerun'> = async function (options) {
           const answer = await ux.confirm(
             chalk.dim(
               `WARNING: No stored revision found for scratch org with name: ${userName}.
-  Store current local revision: ${localServerMaxRevisionCounter}? (y/n)`
-            )
+  Store current local revision: ${localServerMaxRevisionCounter}? (y/n)`,
+            ),
           );
           if (answer) {
             await fs.ensureFile(storedServerMaxRevisionCounterPath);
