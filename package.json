@@ -7,7 +7,7 @@
   "bugs": "https://github.com/jayree/sfdx-plugin-source/issues",
   "dependencies": {
     "@jayree/changelog": "^1.1.5",
-    "@salesforce/sf-plugins-core": "^3.1.18",
+    "@salesforce/sf-plugins-core": "^3.1.20",
     "@salesforce/source-tracking": "^4.2.12",
     "debug": "^4.3.4",
     "deep-object-diff": "^1.1.9",
@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "@oclif/plugin-command-snapshot": "^4.0.14",
-    "@oclif/plugin-help": "^5.2.17",
+    "@oclif/plugin-help": "^5.2.18",
     "@salesforce/dev-config": "^4.0.1",
     "@salesforce/dev-scripts": "^5.7.0",
     "@salesforce/prettier-config": "^0.0.3",
@@ -28,18 +28,18 @@
     "@types/debug": "^4.1.8",
     "@types/fs-extra": "^11.0.1",
     "@types/object-path": "^0.11.1",
-    "@typescript-eslint/eslint-plugin": "^6.4.1",
-    "@typescript-eslint/parser": "^6.4.1",
+    "@typescript-eslint/eslint-plugin": "^6.5.0",
+    "@typescript-eslint/parser": "^6.5.0",
     "c8": "^8.0.1",
     "chai": "^4.3.8",
-    "eslint": "^8.47.0",
+    "eslint": "^8.48.0",
     "eslint-config-oclif": "^4.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-config-salesforce": "^2.0.2",
     "eslint-config-salesforce-typescript": "^1.1.2",
     "eslint-plugin-header": "^3.1.1",
     "eslint-plugin-import": "2.28.1",
-    "eslint-plugin-jsdoc": "^46.5.0",
+    "eslint-plugin-jsdoc": "^46.5.1",
     "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-sf-plugin": "^1.16.3",
     "husky": "^8.0.3",
@@ -54,7 +54,7 @@
     "sinon": "15.2.0",
     "ts-node": "^10.9.1",
     "typescript": "^5.2.2",
-    "wireit": "^0.10.0"
+    "wireit": "^0.11.0"
   },
   "engines": {
     "node": ">=16.0.0"
