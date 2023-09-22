@@ -1,3 +1,13 @@
+## [1.3.19](https://github.com/jayree/sfdx-plugin-source/compare/v1.3.18...v1.3.19) (2023-09-22)
+
+
+### Bug Fixes
+
+* add oclif.lock ([0f87970](https://github.com/jayree/sfdx-plugin-source/commit/0f879705fb5fcb96b54a48261297d1dabacdcb20))
+* **deps:** bump @salesforce/sf-plugins-core from 3.1.22 to 3.1.23 ([#387](https://github.com/jayree/sfdx-plugin-source/issues/387)) ([c35a9a0](https://github.com/jayree/sfdx-plugin-source/commit/c35a9a02212667bfbacfc47023c2574eca9b67be))
+* **deps:** bump @salesforce/source-tracking from 4.2.12 to 4.2.13 ([#390](https://github.com/jayree/sfdx-plugin-source/issues/390)) ([6cb82fd](https://github.com/jayree/sfdx-plugin-source/commit/6cb82fd70deaaa4ffe819da3adb78184dde49799))
+* **deps:** bump fast-xml-parser from 4.2.7 to 4.3.0 ([#386](https://github.com/jayree/sfdx-plugin-source/issues/386)) ([b297f3b](https://github.com/jayree/sfdx-plugin-source/commit/b297f3bdec34c512b5b8f36fae8748b7eae8e225))
+
 ## [1.3.18](https://github.com/jayree/sfdx-plugin-source/compare/v1.3.17...v1.3.18) (2023-09-08)
 
 
