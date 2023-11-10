@@ -1387,10 +1387,10 @@
   resolved "https://registry.yarnpkg.com/@types/normalize-package-data/-/normalize-package-data-2.4.1.tgz#d3357479a0fdfdd5907fe67e17e0a85c906e1301"
   integrity sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw==
 
-"@types/object-path@^0.11.3":
-  version "0.11.3"
-  resolved "https://registry.yarnpkg.com/@types/object-path/-/object-path-0.11.3.tgz#cb41cb1da4559c5be54d6bc7e096bc04b4be23fa"
-  integrity sha512-P6V8jUKl0qA/U5ZAWW1y/BxeFf/R3yZucVGnHtD1qRXmFPndKZK4iZ49qX73R0FIwZnk0yKYixmqtYrPtManaA==
+"@types/object-path@^0.11.4":
+  version "0.11.4"
+  resolved "https://registry.yarnpkg.com/@types/object-path/-/object-path-0.11.4.tgz#a14529227500faf7891d003b2c7f5772c4a5dfdc"
+  integrity sha512-4tgJ1Z3elF/tOMpA8JLVuR9spt9Ynsf7+JjqsQ2IqtiPJtcLoHoXcT6qU4E10cPFqyXX5HDm9QwIzZhBSkLxsw==
 
 "@types/parse-json@^4.0.0":
   version "4.0.0"
