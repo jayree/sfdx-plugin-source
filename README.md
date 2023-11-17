@@ -42,7 +42,7 @@ ALIASES
   $ sfdx jayree:source:snapshot:compare
 ```
 
-_See code: [src/commands/jayree/project/compare/snapshot.ts](https://github.com/jayree/sfdx-plugin-source/blob/v1.3.26/src/commands/jayree/project/compare/snapshot.ts)_
+_See code: [src/commands/jayree/project/compare/snapshot.ts](https://github.com/jayree/sfdx-plugin-source/blob/v1.3.27/src/commands/jayree/project/compare/snapshot.ts)_
 
 ### `sfdx jayree:project:fix`
 
@@ -63,7 +63,7 @@ ALIASES
   $ sfdx jayree:source:fix
 ```
 
-_See code: [src/commands/jayree/project/fix.ts](https://github.com/jayree/sfdx-plugin-source/blob/v1.3.26/src/commands/jayree/project/fix.ts)_
+_See code: [src/commands/jayree/project/fix.ts](https://github.com/jayree/sfdx-plugin-source/blob/v1.3.27/src/commands/jayree/project/fix.ts)_
 
 ### `sfdx jayree:project:generate:snapshot`
 
@@ -83,7 +83,7 @@ ALIASES
   $ sfdx jayree:source:snapshot:generate
 ```
 
-_See code: [src/commands/jayree/project/generate/snapshot.ts](https://github.com/jayree/sfdx-plugin-source/blob/v1.3.26/src/commands/jayree/project/generate/snapshot.ts)_
+_See code: [src/commands/jayree/project/generate/snapshot.ts](https://github.com/jayree/sfdx-plugin-source/blob/v1.3.27/src/commands/jayree/project/generate/snapshot.ts)_
 
 ### `sfdx jayree:project:list:tracking`
 
@@ -94,9 +94,9 @@ USAGE
   $ sfdx jayree:project:list:tracking -o <value> [--json] [--api-version <value>] [-r <value>]
 
 FLAGS
-  -o, --target-org=<value>  (required) Username or alias of the target org.
-  -r, --revision=<value>    Start at a specific revision counter number.
-  --api-version=<value>     Override the api version used for api requests made by this command
+  -o, --target-org=<value>   (required) Username or alias of the target org.
+  -r, --revision=<value>     Start at a specific revision counter number.
+      --api-version=<value>  Override the api version used for api requests made by this command
 
 GLOBAL FLAGS
   --json  Format output as json.
@@ -110,7 +110,7 @@ EXAMPLES
   $ sfdx jayree:source:tracking:list -u me@my.org -r 101
 ```
 
-_See code: [src/commands/jayree/project/list/tracking.ts](https://github.com/jayree/sfdx-plugin-source/blob/v1.3.26/src/commands/jayree/project/list/tracking.ts)_
+_See code: [src/commands/jayree/project/list/tracking.ts](https://github.com/jayree/sfdx-plugin-source/blob/v1.3.27/src/commands/jayree/project/list/tracking.ts)_
 
 ### `sfdx jayree:project:store:tracking:get`
 
@@ -134,7 +134,7 @@ EXAMPLES
   $ sfdx jayree:source:tracking:store:get -u me@my.org
 ```
 
-_See code: [src/commands/jayree/project/store/tracking/get.ts](https://github.com/jayree/sfdx-plugin-source/blob/v1.3.26/src/commands/jayree/project/store/tracking/get.ts)_
+_See code: [src/commands/jayree/project/store/tracking/get.ts](https://github.com/jayree/sfdx-plugin-source/blob/v1.3.27/src/commands/jayree/project/store/tracking/get.ts)_
 
 ### `sfdx jayree:project:store:tracking:set`
 
@@ -145,9 +145,9 @@ USAGE
   $ sfdx jayree:project:store:tracking:set -o <value> [--json] [--api-version <value>] [-r <value>]
 
 FLAGS
-  -o, --target-org=<value>  (required) Username or alias of the target org.
-  -r, --revision=<value>    Revision counter number (default: remote revision counter number).
-  --api-version=<value>     Override the api version used for api requests made by this command
+  -o, --target-org=<value>   (required) Username or alias of the target org.
+  -r, --revision=<value>     Revision counter number (default: remote revision counter number).
+      --api-version=<value>  Override the api version used for api requests made by this command
 
 GLOBAL FLAGS
   --json  Format output as json.
@@ -161,7 +161,7 @@ EXAMPLES
   $ sfdx jayree:source:tracking:store:set -u MyTestOrg1 -r 101
 ```
 
-_See code: [src/commands/jayree/project/store/tracking/set.ts](https://github.com/jayree/sfdx-plugin-source/blob/v1.3.26/src/commands/jayree/project/store/tracking/set.ts)_
+_See code: [src/commands/jayree/project/store/tracking/set.ts](https://github.com/jayree/sfdx-plugin-source/blob/v1.3.27/src/commands/jayree/project/store/tracking/set.ts)_
 <!-- commandsstop -->
 
 ## Hooks
