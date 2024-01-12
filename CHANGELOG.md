@@ -1,3 +1,11 @@
+## [1.3.36](https://github.com/jayree/sfdx-plugin-source/compare/v1.3.35...v1.3.36) (2024-01-12)
+
+
+### Bug Fixes
+
+* **deps:** bump @oclif/core from 3.16.0 to 3.18.1 ([#539](https://github.com/jayree/sfdx-plugin-source/issues/539)) ([208c2fa](https://github.com/jayree/sfdx-plugin-source/commit/208c2fa89d91c0614d6cd70ab5707f325c21dd16))
+* **deps:** bump fast-xml-parser from 4.3.2 to 4.3.3 ([#533](https://github.com/jayree/sfdx-plugin-source/issues/533)) ([a172e3e](https://github.com/jayree/sfdx-plugin-source/commit/a172e3e903d5127dddfc8965f240008f62dcfdcd))
+
 ## [1.3.35](https://github.com/jayree/sfdx-plugin-source/compare/v1.3.34...v1.3.35) (2024-01-05)
 
 
