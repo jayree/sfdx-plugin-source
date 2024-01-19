@@ -1,3 +1,10 @@
+## [1.3.37](https://github.com/jayree/sfdx-plugin-source/compare/v1.3.36...v1.3.37) (2024-01-19)
+
+
+### Bug Fixes
+
+* **deps:** bump @salesforce/source-tracking from 5.1.3 to 5.1.5 ([#548](https://github.com/jayree/sfdx-plugin-source/issues/548)) ([ecdf2b9](https://github.com/jayree/sfdx-plugin-source/commit/ecdf2b970764f623ed526b325909316577b1116b))
+
 ## [1.3.36](https://github.com/jayree/sfdx-plugin-source/compare/v1.3.35...v1.3.36) (2024-01-12)
 
 
