@@ -12,18 +12,18 @@ import ignore from 'ignore';
 const debug = Debug('jayree:state:folder');
 
 export async function getCurrentStateFolderFilePath(
-  projectPath: string,
+  projectPath: string | undefined,
   file: string,
   migrate: boolean,
 ): Promise<string> {
-  const sfdxPath = path.join(projectPath, '.sfdx', file);
-  const sfPath = path.join(projectPath, '.sf', file);
+  const sfdxPath = path.join(projectPath as string, '.sfdx', file);
+  const sfPath = path.join(projectPath as string, '.sf', file);
 
   if (!(await fs.pathExists(sfPath))) {
-    if (await fs.pathExists(path.join(projectPath, '.gitignore'))) {
+    if (await fs.pathExists(path.join(projectPath as string, '.gitignore'))) {
       const gitIgnore = ignore
         .default()
-        .add(Buffer.from(await fs.readFile(path.join(projectPath, '.gitignore'))).toString());
+        .add(Buffer.from(await fs.readFile(path.join(projectPath as string, '.gitignore'))).toString());
       if (!gitIgnore.ignores(path.join('.sf', file))) {
         if (gitIgnore.ignores(path.join('.sfdx', file))) {
           debug('use sfdx state folder');
