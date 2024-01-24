@@ -40,7 +40,7 @@ export default class GenerateSourceSnapshot extends SfCommand<AnyJson> {
   public async run(): Promise<AnyJson> {
     const { flags } = await this.parse(GenerateSourceSnapshot);
 
-    const results = await getParsedSourceComponents(this.project.getPath());
+    const results = await getParsedSourceComponents(this.project?.getPath());
 
     await fs.writeJSON(flags.filepath, results, { spaces: 4 });
     this.log(`Generated snapshot file "${flags.filepath}"`);

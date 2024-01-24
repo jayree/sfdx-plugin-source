@@ -64,7 +64,7 @@ $ sfdx jayree:source:tracking:list -u me@my.org -r 101`,
 
     const maxRev = maxCounter >= maxNum ? maxCounter : maxNum;
     const maxrevpath = await getCurrentStateFolderFilePath(
-      this.project.getPath(),
+      this.project?.getPath(),
       join('orgs', org.getOrgId(), 'maxRevision.json'),
       false,
     );
@@ -102,7 +102,7 @@ $ sfdx jayree:source:tracking:list -u me@my.org -r 101`,
     try {
       const { serverMaxRevisionCounter } = (await fs.readJSON(
         await getCurrentStateFolderFilePath(
-          this.project.getPath(),
+          this.project?.getPath(),
           join('orgs', org.getOrgId(), 'jayreeStoredMaxRevision.json'),
           true,
         ),
