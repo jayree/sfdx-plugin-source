@@ -68,7 +68,7 @@ $ sfdx jayree:source:tracking:store:set -u MyTestOrg1 -r 101`,
     }
 
     const storedmaxrevpath = await getCurrentStateFolderFilePath(
-      this.project.getPath(),
+      this.project?.getPath(),
       join('orgs', org.getOrgId(), 'jayreeStoredMaxRevision.json'),
       true,
     );

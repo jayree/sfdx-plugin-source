@@ -50,7 +50,7 @@ export default class CompareSourceSnapshot extends SfCommand<CompareResponse> {
     const { flags } = await this.parse(CompareSourceSnapshot);
     const orig = (await fs.readJSON(flags.filepath)) as JSON;
 
-    const results = await getParsedSourceComponents(this.project.getPath());
+    const results = await getParsedSourceComponents(this.project?.getPath());
 
     const diff = detailedDiff(orig, results) as { added: object; deleted: object; updated: object };
 
