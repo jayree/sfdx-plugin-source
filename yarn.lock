@@ -1686,10 +1686,10 @@
     "@salesforce/ts-types" "^2.0.9"
     chalk "^5.3.0"
 
-"@salesforce/source-deploy-retrieve@^10.2.11":
-  version "10.2.11"
-  resolved "https://registry.yarnpkg.com/@salesforce/source-deploy-retrieve/-/source-deploy-retrieve-10.2.11.tgz#b3eaa75a1342d9dfbc8d84ff05d1a8ebf48b5241"
-  integrity sha512-XUoSn4I4Ki9m6rX/DaGpfM4PBu2TP/WSDszhlwvfktSO4XjLCqdI2B5KrGk/BQZ5KoxDQIhDp2G7rwgoyypJxw==
+"@salesforce/source-deploy-retrieve@^10.2.12":
+  version "10.2.13"
+  resolved "https://registry.yarnpkg.com/@salesforce/source-deploy-retrieve/-/source-deploy-retrieve-10.2.13.tgz#91a42143353cf38fe47a3e50e1c2548e4facd738"
+  integrity sha512-KreSALl+mr+Yd7AoG+e6CjtD0/2FT4IS6Zvs4R0bbK/blixONycwl+zGaLia2b0X2pvitUOszMouW6aM0SAgvQ==
   dependencies:
     "@salesforce/core" "^6.4.7"
     "@salesforce/kit" "^3.0.15"
@@ -1705,20 +1705,20 @@
     proxy-agent "^6.3.1"
     ts-retry-promise "^0.7.1"
 
-"@salesforce/source-tracking@^5.1.5":
-  version "5.1.5"
-  resolved "https://registry.yarnpkg.com/@salesforce/source-tracking/-/source-tracking-5.1.5.tgz#a8ff65d738ed12ce585540d3efe4a8a4a65afafc"
-  integrity sha512-4uQGz6Vg213CLDCGVI8VIxsFVguShEMDV535YHV3YPK/Q3ls4z4eOBk8vOrFpItlHuKpfYYmAKKy16AFJMgk2w==
+"@salesforce/source-tracking@^5.1.7":
+  version "5.1.7"
+  resolved "https://registry.yarnpkg.com/@salesforce/source-tracking/-/source-tracking-5.1.7.tgz#2bfc3e6c9bf0aabd7ba5644a69977dfd1fef84c3"
+  integrity sha512-kkXWt4X+wxmYsLqG1OIWKgo3aFEg1f+1X6MBIHIrmjEmfMXIRiGX0dRyY+IjFl54w+CnOffNDQNsGSmnPImEYg==
   dependencies:
     "@oclif/core" "^3.18.1"
     "@salesforce/core" "^6.4.7"
     "@salesforce/kit" "^3.0.15"
-    "@salesforce/source-deploy-retrieve" "^10.2.11"
+    "@salesforce/source-deploy-retrieve" "^10.2.12"
     "@salesforce/ts-types" "^2.0.9"
     fast-xml-parser "^4.2.5"
     graceful-fs "^4.2.11"
     isomorphic-git "1.23.0"
-    ts-retry-promise "^0.7.0"
+    ts-retry-promise "^0.8.0"
 
 "@salesforce/ts-sinon@^1.4.19":
   version "1.4.19"
@@ -8916,10 +8916,15 @@ ts-node@^10.8.1, ts-node@^10.9.2:
     v8-compile-cache-lib "^3.0.1"
     yn "3.1.1"
 
-ts-retry-promise@^0.7.0, ts-retry-promise@^0.7.1:
+ts-retry-promise@^0.7.1:
   version "0.7.1"
   resolved "https://registry.yarnpkg.com/ts-retry-promise/-/ts-retry-promise-0.7.1.tgz#176d6eee6415f07b6c7c286d3657355e284a6906"
   integrity sha512-NhHOCZ2AQORvH42hOPO5UZxShlcuiRtm7P2jIq2L2RY3PBxw2mLnUsEdHrIslVBFya1v5aZmrR55lWkzo13LrQ==
+
+ts-retry-promise@^0.8.0:
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/ts-retry-promise/-/ts-retry-promise-0.8.0.tgz#0a0c57b510827d5630da4b0c47f36b55b83a49e3"
+  integrity sha512-elI/GkojPANBikPaMWQnk4T/bOJ6tq/hqXyQRmhfC9PAD6MoHmXIXK7KilJrlpx47VAKCGcmBrTeK5dHk6YAYg==
 
 tsconfig-paths@^3.14.2:
   version "3.14.2"
