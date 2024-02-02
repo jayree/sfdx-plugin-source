@@ -9,7 +9,7 @@
     "@jayree/changelog": "^1.1.9",
     "@oclif/core": "^3.18.1",
     "@salesforce/sf-plugins-core": "^7.1.4",
-    "@salesforce/source-tracking": "^5.1.7",
+    "@salesforce/source-tracking": "^5.1.9",
     "debug": "^4.3.4",
     "deep-object-diff": "^1.1.9",
     "fast-xml-parser": "^4.3.3",
