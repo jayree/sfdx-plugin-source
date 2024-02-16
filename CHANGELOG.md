@@ -1,3 +1,11 @@
+## [1.3.42](https://github.com/jayree/sfdx-plugin-source/compare/v1.3.41...v1.3.42) (2024-02-16)
+
+
+### Bug Fixes
+
+* **deps:** bump @oclif/core from 3.19.1 to 3.19.2 ([#565](https://github.com/jayree/sfdx-plugin-source/issues/565)) ([4949855](https://github.com/jayree/sfdx-plugin-source/commit/4949855c3a1a5be1ecf1a9940a89db3f8eae8b11))
+* **deps:** bump globby from 14.0.0 to 14.0.1 ([#566](https://github.com/jayree/sfdx-plugin-source/issues/566)) ([e428407](https://github.com/jayree/sfdx-plugin-source/commit/e42840768ecd4fa29aa49f38c074f1d1969a3447))
+
 ## [1.3.41](https://github.com/jayree/sfdx-plugin-source/compare/v1.3.40...v1.3.41) (2024-02-09)
 
 
