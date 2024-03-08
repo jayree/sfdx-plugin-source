@@ -7,7 +7,7 @@
   "bugs": "https://github.com/jayree/sfdx-plugin-source/issues",
   "dependencies": {
     "@jayree/changelog": "^1.1.10",
-    "@oclif/core": "^3.19.5",
+    "@oclif/core": "^3.23.0",
     "@salesforce/sf-plugins-core": "^7.1.14",
     "@salesforce/source-tracking": "^5.1.11",
     "debug": "^4.3.4",
