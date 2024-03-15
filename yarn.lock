@@ -1489,10 +1489,10 @@
     wordwrap "^1.0.0"
     wrap-ansi "^7.0.0"
 
-"@oclif/core@^3.19.5", "@oclif/core@^3.19.6", "@oclif/core@^3.21.0", "@oclif/core@^3.22.0":
-  version "3.23.0"
-  resolved "https://registry.yarnpkg.com/@oclif/core/-/core-3.23.0.tgz#d0ccc5f99c376e4bcfce04e8e94efae8417a53f8"
-  integrity sha512-giQ/8Ft8yXWg4IyPVtynPb7ihoQsa3A/1Q53UIJIhh+8k+EedE3lJ01yn6sq6Ha35IGqsG1WhkeHzlJIuldEaw==
+"@oclif/core@^3.19.5", "@oclif/core@^3.19.6", "@oclif/core@^3.21.0", "@oclif/core@^3.23.0":
+  version "3.25.1"
+  resolved "https://registry.yarnpkg.com/@oclif/core/-/core-3.25.1.tgz#f61375d53b6a627009fc353423ac5e94a453fe50"
+  integrity sha512-L0WTgrcXBa1mc7CYxG0W07sRa4Zs5XpFD2HHhck7Xfqq7jnNcKDSuZ/LdqesVCry6eUHMh3C00IhJr6Msk19Iw==
   dependencies:
     "@types/cli-progress" "^3.11.5"
     ansi-escapes "^4.3.2"
@@ -1788,12 +1788,12 @@
     proxy-agent "^6.4.0"
     ts-retry-promise "^0.7.1"
 
-"@salesforce/source-tracking@^5.1.13":
-  version "5.1.13"
-  resolved "https://registry.yarnpkg.com/@salesforce/source-tracking/-/source-tracking-5.1.13.tgz#aa005ff5349f26e91d44e2cc7db4aaff523f0366"
-  integrity sha512-c8eABHnpN72N4s4L2Qb7Acx7J2sOqm6Ni8doNfooZF2ZFycO20htJszZIeXfInkcySMM8r083vi9+ShkBeN5uw==
+"@salesforce/source-tracking@^5.1.14":
+  version "5.1.14"
+  resolved "https://registry.yarnpkg.com/@salesforce/source-tracking/-/source-tracking-5.1.14.tgz#ae2c02d687099e68508e327545f3b123a71dced2"
+  integrity sha512-wrxFM5Wz4GekH4R+eAd+h780K4qNIU7/77Frua5HDHvORcj07zGR8prJ2zG2/bbYwaclojexH9zHi0RHe2LMoA==
   dependencies:
-    "@oclif/core" "^3.22.0"
+    "@oclif/core" "^3.23.0"
     "@salesforce/core" "^6.7.0"
     "@salesforce/kit" "^3.0.15"
     "@salesforce/source-deploy-retrieve" "^10.5.1"
