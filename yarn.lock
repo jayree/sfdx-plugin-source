@@ -1308,7 +1308,7 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@oclif/core@3.26.0", "@oclif/core@^3.21.0", "@oclif/core@^3.23.0", "@oclif/core@^3.25.2", "@oclif/core@^3.26.0":
+"@oclif/core@3.26.0", "@oclif/core@^3.21.0", "@oclif/core@^3.23.0", "@oclif/core@^3.26.0":
   version "3.26.0"
   resolved "https://registry.yarnpkg.com/@oclif/core/-/core-3.26.0.tgz#959d5e9f13f4ad6a4e98235ad125189df9ee4279"
   integrity sha512-TpMdfD4tfA2tVVbd4l0PrP02o5KoUXYmudBbTC7CeguDo/GLoprw4uL8cMsaVA26+cbcy7WYtOEydQiHVtJixA==
@@ -1487,7 +1487,7 @@
     "@salesforce/ts-types" "^2.0.9"
     chalk "^5.3.0"
 
-"@salesforce/source-deploy-retrieve@^10.5.3", "@salesforce/source-deploy-retrieve@^10.6.1":
+"@salesforce/source-deploy-retrieve@^10.6.1":
   version "10.6.1"
   resolved "https://registry.yarnpkg.com/@salesforce/source-deploy-retrieve/-/source-deploy-retrieve-10.6.1.tgz#d153168c5870ce051a6e397df00083da1e6a8106"
   integrity sha512-AdX0rlMNw88kD4jTqdW7uxl6wTd+WTESHEH5Vj8e9Fj2cC8pZj5BwDMYbU/cVFFbQoEBjqqnxwJC6ziPw83Bsw==
@@ -1506,17 +1506,17 @@
     proxy-agent "^6.4.0"
     ts-retry-promise "^0.7.1"
 
-"@salesforce/source-tracking@^5.1.18":
-  version "5.1.18"
-  resolved "https://registry.yarnpkg.com/@salesforce/source-tracking/-/source-tracking-5.1.18.tgz#aea622c04ac199b2288b3a94c6b8e8f207c438f7"
-  integrity sha512-V8itdxwfP72Kq26psNdxi3JI3tQRdxzViKUQM5w33B6vahWJS3P3nBOzIFJGu+J9/SMDUHRpPYTwUL84yXdoyA==
+"@salesforce/source-tracking@^5.2.1":
+  version "5.2.1"
+  resolved "https://registry.yarnpkg.com/@salesforce/source-tracking/-/source-tracking-5.2.1.tgz#aaaa8e5e00db017aeb0787fe042ee0cd45763fb9"
+  integrity sha512-RnFuESSVNn4kxGbGE/a8AdKZrxt4vo7JT32NkTr7RBKokzkpczIacIDHcFGqkDLX409fZcAD4HDdvYBRpSFudw==
   dependencies:
-    "@oclif/core" "^3.25.2"
-    "@salesforce/core" "^6.7.1"
-    "@salesforce/kit" "^3.0.15"
-    "@salesforce/source-deploy-retrieve" "^10.5.3"
+    "@oclif/core" "^3.26.0"
+    "@salesforce/core" "^6.7.3"
+    "@salesforce/kit" "^3.1.0"
+    "@salesforce/source-deploy-retrieve" "^10.6.1"
     "@salesforce/ts-types" "^2.0.9"
-    fast-xml-parser "^4.2.5"
+    fast-xml-parser "^4.3.6"
     graceful-fs "^4.2.11"
     isomorphic-git "1.23.0"
     ts-retry-promise "^0.8.0"
@@ -4220,7 +4220,7 @@ fast-xml-parser@4.2.5:
   dependencies:
     strnum "^1.0.5"
 
-fast-xml-parser@^4.2.5, fast-xml-parser@^4.3.5, fast-xml-parser@^4.3.6:
+fast-xml-parser@^4.3.5, fast-xml-parser@^4.3.6:
   version "4.3.6"
   resolved "https://registry.yarnpkg.com/fast-xml-parser/-/fast-xml-parser-4.3.6.tgz#190f9d99097f0c8f2d3a0e681a10404afca052ff"
   integrity sha512-M2SovcRxD4+vC493Uc2GZVcZaj66CCJhWurC4viynVSTvrpErCShNcDz1lAho6n9REQKvL/ll4A4/fw6Y9z8nw==
