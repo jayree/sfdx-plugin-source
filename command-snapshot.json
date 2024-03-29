@@ -1,50 +1,50 @@
 [
   {
-    "command": "jayree:project:compare:snapshot",
-    "plugin": "@jayree/sfdx-plugin-source",
-    "flags": ["filepath", "json"],
     "alias": ["jayree:source:snapshot:compare"],
+    "command": "jayree:project:compare:snapshot",
+    "flagAliases": [],
     "flagChars": [],
-    "flagAliases": []
+    "flags": ["filepath", "flags-dir", "json"],
+    "plugin": "@jayree/sfdx-plugin-source"
   },
   {
-    "command": "jayree:project:fix",
-    "plugin": "@jayree/sfdx-plugin-source",
-    "flags": ["json", "target-org", "task"],
     "alias": ["jayree:source:fix"],
+    "command": "jayree:project:fix",
+    "flagAliases": ["tag", "targetusername", "u"],
     "flagChars": ["o", "t"],
-    "flagAliases": ["tag", "targetusername", "u"]
+    "flags": ["flags-dir", "json", "target-org", "task"],
+    "plugin": "@jayree/sfdx-plugin-source"
   },
   {
-    "command": "jayree:project:generate:snapshot",
-    "plugin": "@jayree/sfdx-plugin-source",
-    "flags": ["filepath", "json"],
     "alias": ["jayree:source:snapshot:generate"],
+    "command": "jayree:project:generate:snapshot",
+    "flagAliases": [],
     "flagChars": [],
-    "flagAliases": []
+    "flags": ["filepath", "flags-dir", "json"],
+    "plugin": "@jayree/sfdx-plugin-source"
   },
   {
-    "command": "jayree:project:list:tracking",
-    "plugin": "@jayree/sfdx-plugin-source",
-    "flags": ["api-version", "json", "revision", "target-org"],
     "alias": ["jayree:source:tracking:list"],
+    "command": "jayree:project:list:tracking",
+    "flagAliases": ["apiversion", "targetusername", "u"],
     "flagChars": ["o", "r"],
-    "flagAliases": ["apiversion", "targetusername", "u"]
+    "flags": ["api-version", "flags-dir", "json", "revision", "target-org"],
+    "plugin": "@jayree/sfdx-plugin-source"
   },
   {
-    "command": "jayree:project:store:tracking:get",
-    "plugin": "@jayree/sfdx-plugin-source",
-    "flags": ["json", "target-org"],
     "alias": ["jayree:source:tracking:store:get"],
+    "command": "jayree:project:store:tracking:get",
+    "flagAliases": ["targetusername", "u"],
     "flagChars": ["o"],
-    "flagAliases": ["targetusername", "u"]
+    "flags": ["flags-dir", "json", "target-org"],
+    "plugin": "@jayree/sfdx-plugin-source"
   },
   {
-    "command": "jayree:project:store:tracking:set",
-    "plugin": "@jayree/sfdx-plugin-source",
-    "flags": ["api-version", "json", "revision", "target-org"],
     "alias": ["jayree:source:tracking:store:set"],
+    "command": "jayree:project:store:tracking:set",
+    "flagAliases": ["apiversion", "targetusername", "u"],
     "flagChars": ["o", "r"],
-    "flagAliases": ["apiversion", "targetusername", "u"]
+    "flags": ["api-version", "flags-dir", "json", "revision", "target-org"],
+    "plugin": "@jayree/sfdx-plugin-source"
   }
 ]
