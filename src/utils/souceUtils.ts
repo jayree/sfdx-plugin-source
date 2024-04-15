@@ -7,8 +7,7 @@
 import path from 'node:path';
 import os from 'node:os';
 import fs from 'fs-extra';
-import { SfProject } from '@salesforce/core';
-import { traverse } from '@salesforce/core/lib/util/internal.js';
+import { SfError, SfProject } from '@salesforce/core';
 import kit from '@salesforce/kit';
 import { ux } from '@oclif/core';
 import { globby } from 'globby';
@@ -23,10 +22,37 @@ import {
 } from '@salesforce/source-deploy-retrieve';
 import Debug from 'debug';
 import { JsToXml } from '@salesforce/source-deploy-retrieve/lib/src/convert/streams.js';
-import { JsonMap } from '@salesforce/ts-types';
+import { JsonMap, Optional } from '@salesforce/ts-types';
 import config from './config.js';
 import { objectPath, ObjectPathResolver, compareobj } from './object-path.js';
 import { FixConfig, aggregatedFixResults, fixResult } from './types.js';
+
+const traverse = {
+  /**
+   * Searches a file path in an ascending manner (until reaching the filesystem root) for the first occurrence a
+   * specific file name.  Resolves with the directory path containing the located file, or `null` if the file was
+   * not found.
+   *
+   * @param dir The directory path in which to start the upward search.
+   * @param file The file name to look for.
+   */
+  forFile: async (dir: string, file: string): Promise<Optional<string>> => {
+    let foundProjectDir: Optional<string>;
+    try {
+      fs.statSync(path.join(dir, file));
+      foundProjectDir = dir;
+    } catch (err) {
+      if (err && (err as SfError).code === 'ENOENT') {
+        const nextDir = path.resolve(dir, '..');
+        if (nextDir !== dir) {
+          // stop at root
+          foundProjectDir = await traverse.forFile(nextDir, file);
+        }
+      }
+    }
+    return foundProjectDir;
+  },
+};
 
 interface ProfileData {
   [key: string]: unknown;
