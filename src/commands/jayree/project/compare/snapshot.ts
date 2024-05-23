@@ -49,10 +49,13 @@ export default class CompareSourceSnapshot extends SfCommand<CompareResponse> {
     );
 
     const diff = detailedDiff(orig, results) as { added: object; deleted: object; updated: object };
-
-    const addedMetadata = Object.keys(diff.added);
-    const removedMetadata = Object.keys(diff.deleted);
-    const modifiedMetadata = Object.keys(diff.updated);
+    const addedMetadata = Object.keys(diff.added).filter((k) => !(k in orig));
+    const removedMetadata = Object.keys(diff.deleted).filter((k) => !(k in results));
+    const modifiedMetadata = [
+      ...Object.keys(diff.updated),
+      ...Object.keys(diff.added).filter((k) => k in orig),
+      ...Object.keys(diff.deleted).filter((k) => k in results),
+    ].filter((value, index, self) => self.indexOf(value) === index);
 
     if (addedMetadata.length === 0 && removedMetadata.length === 0 && modifiedMetadata.length === 0) {
       this.log('No changes have been detected.');
