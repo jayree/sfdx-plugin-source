@@ -8,14 +8,21 @@ import { relative } from 'node:path';
 import { ComponentSet } from '@salesforce/source-deploy-retrieve';
 import { JsonMap } from '@salesforce/ts-types';
 
-export async function getParsedSourceComponents(projectPath: string | undefined): Promise<{ [key: string]: JsonMap }> {
-  const componentSet = ComponentSet.fromSource(projectPath as string).getSourceComponents();
+export async function getParsedSourceComponents(
+  uniquePackageDirectories: string[] | undefined,
+  projectPath: string | undefined,
+): Promise<{ [key: string]: JsonMap }> {
   const results: { [key: string]: JsonMap } = {};
-  for await (const component of componentSet) {
-    for await (const childComponent of component.getChildren()) {
-      results[relative(projectPath as string, childComponent.xml as string)] = await childComponent.parseXml();
+  if (uniquePackageDirectories) {
+    for await (const packageDirectory of uniquePackageDirectories) {
+      const componentSet = ComponentSet.fromSource(packageDirectory).getSourceComponents();
+      for await (const component of componentSet) {
+        for await (const childComponent of component.getChildren()) {
+          results[relative(projectPath as string, childComponent.xml as string)] = await childComponent.parseXml();
+        }
+        results[relative(projectPath as string, component.xml as string)] = await component.parseXml();
+      }
     }
-    results[relative(projectPath as string, component.xml as string)] = await component.parseXml();
   }
   return results;
 }
