@@ -1,3 +1,14 @@
+## [1.3.58](https://github.com/jayree/sfdx-plugin-source/compare/v1.3.57...v1.3.58) (2024-05-24)
+
+
+### Bug Fixes
+
+* **deps:** bump @salesforce/sf-plugins-core from 9.0.10 to 9.0.12 ([#684](https://github.com/jayree/sfdx-plugin-source/issues/684)) ([eee3156](https://github.com/jayree/sfdx-plugin-source/commit/eee3156e0afc892420da776a3021dd1ccb34913f))
+* **deps:** bump @salesforce/source-tracking from 6.2.1 to 6.2.4 ([#682](https://github.com/jayree/sfdx-plugin-source/issues/682)) ([af537f1](https://github.com/jayree/sfdx-plugin-source/commit/af537f161d8c51c008e7e78f61bb79597d9ba0c3))
+* **deps:** bump fast-xml-parser from 4.3.6 to 4.4.0 ([#686](https://github.com/jayree/sfdx-plugin-source/issues/686)) ([f2f1394](https://github.com/jayree/sfdx-plugin-source/commit/f2f1394e4568f193522cdca1c34728c21ca5a4bf))
+* **snapshot:** correction of the compare results ([3d91d14](https://github.com/jayree/sfdx-plugin-source/commit/3d91d148a5d35ab97c7a8f5f261059524c3bf711))
+* **snapshot:** use packageDirectories instead of project ([1db2dd9](https://github.com/jayree/sfdx-plugin-source/commit/1db2dd906356a3a6a2196300e30461f990ad10a8))
+
 ## [1.3.57](https://github.com/jayree/sfdx-plugin-source/compare/v1.3.56...v1.3.57) (2024-05-17)
 
 
