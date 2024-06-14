@@ -5,15 +5,17 @@
  * For full license text, see LICENSE.txt file in the repo root or https://opensource.org/licenses/BSD-3-Clause
  */
 import path from 'node:path';
-import { Hook, ux } from '@oclif/core';
+import { Hook } from '@oclif/core';
+import { Ux, prompts, StandardColors } from '@salesforce/sf-plugins-core';
 import { env } from '@salesforce/kit';
 import fs from 'fs-extra';
-import chalk from 'chalk';
 import { SourceTracking } from '@salesforce/source-tracking';
 import { SfProject, Org, ConfigAggregator } from '@salesforce/core';
 import Debug from 'debug';
 import { Optional } from '@salesforce/ts-types';
 import { getCurrentStateFolderFilePath } from '../utils/stateFolderHandler.js';
+
+const ux = new Ux();
 
 async function getConnectionFromArgv(argv: string[]): Promise<{
   username: Optional<string>;
@@ -107,12 +109,14 @@ export const prerun: Hook<'prerun'> = async function (options) {
             debug(error);
             localServerMaxRevisionCounter = 0;
           }
-          const answer = await ux.confirm(
-            chalk.dim(
+          const answer = await prompts.confirm({
+            message: StandardColors.info(
               `WARNING: No stored revision found for scratch org with name: ${userName}.
   Store current local revision: ${localServerMaxRevisionCounter}? (y/n)`,
             ),
-          );
+            ms: 30_000,
+            defaultAnswer: false,
+          });
           if (answer) {
             await fs.ensureFile(storedServerMaxRevisionCounterPath);
             await fs.writeJSON(storedServerMaxRevisionCounterPath, {
