@@ -14,7 +14,7 @@ import {
 import { Messages } from '@salesforce/core';
 import { AnyJson } from '@salesforce/ts-types';
 import fs from 'fs-extra';
-import chalk from 'chalk';
+import ansis from 'ansis';
 import { getCurrentStateFolderFilePath } from '../../../../utils/stateFolderHandler.js';
 
 Messages.importMessagesDirectoryFromMetaUrl(import.meta.url);
@@ -188,7 +188,7 @@ $ sfdx jayree:source:tracking:list -u me@my.org -r 101`,
     });
 
     this.styledHeader(
-      chalk.blue(`SourceMember revision counter numbers list for: ${org.getUsername()}/${org.getOrgId()}`),
+      ansis.blue(`SourceMember revision counter numbers list for: ${org.getUsername()}/${org.getOrgId()}`),
     );
     this.table(sourceMemberResults, {
       REVISIONCOUNTER: {

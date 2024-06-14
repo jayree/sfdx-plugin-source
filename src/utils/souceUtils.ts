@@ -9,10 +9,10 @@ import os from 'node:os';
 import fs from 'fs-extra';
 import { SfError, SfProject } from '@salesforce/core';
 import kit from '@salesforce/kit';
-import { ux } from '@oclif/core';
+import { Ux } from '@salesforce/sf-plugins-core';
 import { globby } from 'globby';
 import { Org, ConfigAggregator, Connection, OrgConfigProperties } from '@salesforce/core';
-import chalk from 'chalk';
+import ansis from 'ansis';
 import {
   ComponentSet,
   FileResponse,
@@ -26,6 +26,8 @@ import { JsonMap, Optional } from '@salesforce/ts-types';
 import config from './config.js';
 import { objectPath, ObjectPathResolver, compareobj } from './object-path.js';
 import { FixConfig, aggregatedFixResults, fixResult } from './types.js';
+
+const ux = new Ux();
 
 const traverse = {
   /**
@@ -184,7 +186,7 @@ export async function logFixes(updatedfiles: aggregatedFixResults): Promise<void
     const root = (await getProjectPath()) as string;
     Object.keys(updatedfiles).forEach((task) => {
       if (updatedfiles[task].length) {
-        ux.styledHeader(chalk.blue(`Fixed Source: ${task}`));
+        ux.styledHeader(ansis.blue(`Fixed Source: ${task}`));
         ux.table(updatedfiles[task], {
           filePath: {
             header: 'FILEPATH',

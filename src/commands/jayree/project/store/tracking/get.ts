@@ -9,7 +9,7 @@ import { SfCommand, requiredOrgFlagWithDeprecations } from '@salesforce/sf-plugi
 import { Messages } from '@salesforce/core';
 import { AnyJson } from '@salesforce/ts-types';
 import fs from 'fs-extra';
-import chalk from 'chalk';
+import ansis from 'ansis';
 import { getCurrentStateFolderFilePath } from '../../../../../utils/stateFolderHandler.js';
 
 Messages.importMessagesDirectoryFromMetaUrl(import.meta.url);
@@ -45,7 +45,7 @@ $ sfdx jayree:source:tracking:store:get -u me@my.org`,
       ),
       { throws: false },
     )) as { serverMaxRevisionCounter: number };
-    this.styledHeader(chalk.blue('Get stored SourceMember revision counter number'));
+    this.styledHeader(ansis.blue('Get stored SourceMember revision counter number'));
     this.table(
       [
         {

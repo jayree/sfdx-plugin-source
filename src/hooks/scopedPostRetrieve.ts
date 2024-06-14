@@ -5,13 +5,16 @@
  * For full license text, see LICENSE.txt file in the repo root or https://opensource.org/licenses/BSD-3-Clause
  */
 import path from 'node:path';
-import { Hook, Config, ux } from '@oclif/core';
+import { Hook, Config } from '@oclif/core';
 import { env } from '@salesforce/kit';
 import { SfProject } from '@salesforce/core';
 import { ComponentStatus, FileResponseSuccess, ScopedPostRetrieve } from '@salesforce/source-deploy-retrieve';
 import Debug from 'debug';
 import { Command } from '@oclif/core';
+import { Ux } from '@salesforce/sf-plugins-core';
 import { logFixes, isOutputEnabled, getFixes, applyFixes, setDebug } from '../utils/souceUtils.js';
+
+const ux = new Ux();
 
 type HookFunction = (this: Hook.Context, options: HookOptions) => Promise<void>;
 

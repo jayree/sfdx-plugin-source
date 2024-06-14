@@ -14,7 +14,7 @@ import {
 import { Messages } from '@salesforce/core';
 import { AnyJson } from '@salesforce/ts-types';
 import fs from 'fs-extra';
-import chalk from 'chalk';
+import ansis from 'ansis';
 import { getCurrentStateFolderFilePath } from '../../../../../utils/stateFolderHandler.js';
 
 Messages.importMessagesDirectoryFromMetaUrl(import.meta.url);
@@ -72,7 +72,7 @@ $ sfdx jayree:source:tracking:store:set -u MyTestOrg1 -r 101`,
     await fs.ensureFile(storedmaxrevpath);
     await fs.writeJSON(storedmaxrevpath, { serverMaxRevisionCounter: newMaxRev });
 
-    this.styledHeader(chalk.blue('Set stored SourceMember revision counter number'));
+    this.styledHeader(ansis.blue('Set stored SourceMember revision counter number'));
     this.table(
       [
         {

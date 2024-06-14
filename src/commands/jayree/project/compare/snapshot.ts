@@ -9,7 +9,7 @@ import { Flags, SfCommand } from '@salesforce/sf-plugins-core';
 import { Messages } from '@salesforce/core';
 import fs from 'fs-extra';
 import { detailedDiff } from 'deep-object-diff';
-import chalk from 'chalk';
+import ansis from 'ansis';
 import { getParsedSourceComponents } from '../../../../utils/parse.js';
 
 Messages.importMessagesDirectoryFromMetaUrl(import.meta.url);
@@ -65,21 +65,21 @@ export default class CompareSourceSnapshot extends SfCommand<CompareResponse> {
     process.exitCode = 1;
 
     this.log(
-      `The following source files have been modified: (${chalk.green('A')} added, ${chalk.red(
+      `The following source files have been modified: (${ansis.green('A')} added, ${ansis.red(
         'D',
-      )} removed, ${chalk.yellow('M')} modified)${os.EOL}`,
+      )} removed, ${ansis.yellow('M')} modified)${os.EOL}`,
     );
 
     removedMetadata.forEach((metadata) => {
-      this.log(chalk.red(`D\t${metadata}`));
+      this.log(ansis.red(`D\t${metadata}`));
     });
 
     addedMetadata.forEach((metadata) => {
-      this.log(chalk.green(`A\t${metadata}`));
+      this.log(ansis.green(`A\t${metadata}`));
     });
 
     modifiedMetadata.forEach((metadata) => {
-      this.log(chalk.yellow(`M\t${metadata}`));
+      this.log(ansis.yellow(`M\t${metadata}`));
     });
 
     this.log(`${os.EOL}Source files differences detected. If intended, please update the snapshot file and run again.`);
