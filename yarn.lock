@@ -1809,7 +1809,7 @@
   resolved "https://registry.yarnpkg.com/@pkgr/core/-/core-0.1.1.tgz#1ec17e2edbec25c8306d424ecfbf13c7de1aaa31"
   integrity sha512-cq8o4cWH0ibXh9VGi5P20Tu9XF/0fFXl9EUinr9QfTM7a7p0oTA4iJRCQWppXR1Pg8dSM0UCItCkPwsk9qWWYA==
 
-"@salesforce/core@^8.0.1", "@salesforce/core@^8.0.5", "@salesforce/core@^8.1.0", "@salesforce/core@^8.1.1":
+"@salesforce/core@^8.0.1", "@salesforce/core@^8.1.0", "@salesforce/core@^8.1.1":
   version "8.1.1"
   resolved "https://registry.yarnpkg.com/@salesforce/core/-/core-8.1.1.tgz#26db4e6da3573c4bd223eb05cb3da6aad8b2a311"
   integrity sha512-PQ58kz0oRk/cjGhmiRj8W+x0Eg2mrWagrA4xMKaXjBAgSgU+V39BaO9IC1G2cAMGy53JJRBO5G876ala4gD44w==
@@ -1905,7 +1905,7 @@
     string-width "^7.1.0"
     terminal-link "^3.0.0"
 
-"@salesforce/source-deploy-retrieve@^12.0.2", "@salesforce/source-deploy-retrieve@^12.1.4":
+"@salesforce/source-deploy-retrieve@^12.1.4":
   version "12.1.4"
   resolved "https://registry.yarnpkg.com/@salesforce/source-deploy-retrieve/-/source-deploy-retrieve-12.1.4.tgz#c4cbb181b72bb215e24c3591df560f9bd40998b1"
   integrity sha512-fsf/sH504dffjcWQsiILz6DUIi3YryyJiBqkYmLeQ+kx9G+r+ToFzZBO2NMn6vp8EYE+qPmpbHiV/Qpf4y5dpw==
@@ -1923,15 +1923,15 @@
     minimatch "^9.0.5"
     proxy-agent "^6.4.0"
 
-"@salesforce/source-tracking@^7.0.3":
-  version "7.0.3"
-  resolved "https://registry.yarnpkg.com/@salesforce/source-tracking/-/source-tracking-7.0.3.tgz#dd496a6df65d3ed0b64585877bbc975b1de47c99"
-  integrity sha512-YUCge4TiupBNJ6OHHW/WZM8+4QbyQSz+mLU+dNpahFQaG5AXaXFhdUXJJBnWAGgPgxp0TCUiPO5ynVj346WGCQ==
+"@salesforce/source-tracking@^7.0.5":
+  version "7.0.5"
+  resolved "https://registry.yarnpkg.com/@salesforce/source-tracking/-/source-tracking-7.0.5.tgz#0a0d262864540ca13eb44f3a50f94299c38d47f7"
+  integrity sha512-ZzDi7ZB/dzz3jX9ShudOnlNSwfyBrrf3qgpjn7+lKy0J46yaHKq6edQsnbd7p7C1hC+UckOZs001H7typzwUmw==
   dependencies:
-    "@oclif/core" "^4.0.6"
-    "@salesforce/core" "^8.0.5"
+    "@oclif/core" "^4.0.8"
+    "@salesforce/core" "^8.1.0"
     "@salesforce/kit" "^3.1.6"
-    "@salesforce/source-deploy-retrieve" "^12.0.2"
+    "@salesforce/source-deploy-retrieve" "^12.1.4"
     "@salesforce/ts-types" "^2.0.10"
     fast-xml-parser "^4.4.0"
     graceful-fs "^4.2.11"
