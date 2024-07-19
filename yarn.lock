@@ -1579,7 +1579,7 @@
     wordwrap "^1.0.0"
     wrap-ansi "^7.0.0"
 
-"@oclif/core@^4", "@oclif/core@^4.0.11", "@oclif/core@^4.0.12", "@oclif/core@^4.0.8":
+"@oclif/core@^4", "@oclif/core@^4.0.11", "@oclif/core@^4.0.12":
   version "4.0.12"
   resolved "https://registry.yarnpkg.com/@oclif/core/-/core-4.0.12.tgz#b47089631827e2c909bfffc8c14d7b1781e502ce"
   integrity sha512-o2dfPtmi2uBGHgpvHr+GNfoRKysKgQGiffONoMN3R+qBVNeIkJIZhVk31HreDkAI9LAzS92BWNgp/l7lXDxdvg==
@@ -1769,19 +1769,19 @@
     minimatch "^9.0.5"
     proxy-agent "^6.4.0"
 
-"@salesforce/source-tracking@^7.0.7":
-  version "7.0.7"
-  resolved "https://registry.yarnpkg.com/@salesforce/source-tracking/-/source-tracking-7.0.7.tgz#c4505f22f4898645e41ea6d026054c72c40b9327"
-  integrity sha512-/qTk0UoX/O6nzFWXMMcxo9f1WH4zpc5wUl+2ET3/IZ3ivQorE/CFiHzKgmBW/SLnqJs7B7bEhIfgQff6gqXbTg==
+"@salesforce/source-tracking@^7.0.9":
+  version "7.0.9"
+  resolved "https://registry.yarnpkg.com/@salesforce/source-tracking/-/source-tracking-7.0.9.tgz#d7779a90e65ffb2b13d44fa52deed992f4ff803d"
+  integrity sha512-1QHXPzZEk/wpBGfUy++3zBcUZ+rW1pNLkiNyfCRzJU1qx7CFn2+oXTsni1q935NmayuMyj4Eu38t/kwAbMX4yA==
   dependencies:
-    "@oclif/core" "^4.0.8"
+    "@oclif/core" "^4.0.11"
     "@salesforce/core" "^8.1.1"
     "@salesforce/kit" "^3.1.6"
     "@salesforce/source-deploy-retrieve" "^12.1.5"
     "@salesforce/ts-types" "^2.0.10"
     fast-xml-parser "^4.4.0"
     graceful-fs "^4.2.11"
-    isomorphic-git "^1.27.0"
+    isomorphic-git "^1.27.1"
     ts-retry-promise "^0.8.1"
 
 "@salesforce/ts-sinon@^1.4.22":
@@ -5612,7 +5612,7 @@ isexe@^2.0.0:
   resolved "https://registry.yarnpkg.com/isexe/-/isexe-2.0.0.tgz#e8fbf374dc556ff8947a10dcb0572d633f2cfa10"
   integrity sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==
 
-isomorphic-git@^1.27.0:
+isomorphic-git@^1.27.1:
   version "1.27.1"
   resolved "https://registry.yarnpkg.com/isomorphic-git/-/isomorphic-git-1.27.1.tgz#a2752fce23a09f04baa590c41cfaf61e973405b3"
   integrity sha512-X32ph5zIWfT75QAqW2l3JCIqnx9/GWd17bRRehmn3qmWc34OYbSXY6Cxv0o9bIIY+CWugoN4nQFHNA+2uYf2nA==
