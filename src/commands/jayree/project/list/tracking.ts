@@ -188,7 +188,7 @@ $ sfdx jayree:source:tracking:list -u me@my.org -r 101`,
     });
 
     this.styledHeader(
-      ansis.blue(`SourceMember revision counter numbers list for: ${org.getUsername()}/${org.getOrgId()}`),
+      ansis.blue(`SourceMember revision counter numbers list for: ${org.getUsername() as string}/${org.getOrgId()}`),
     );
     this.table(sourceMemberResults, {
       REVISIONCOUNTER: {

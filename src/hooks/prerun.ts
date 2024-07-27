@@ -111,7 +111,7 @@ export const prerun: Hook<'prerun'> = async function (options) {
           }
           const answer = await prompts.confirm({
             message: StandardColors.info(
-              `WARNING: No stored revision found for scratch org with name: ${userName}.
+              `WARNING: No stored revision found for scratch org with name: ${userName as string}.
   Store current local revision: ${localServerMaxRevisionCounter}? (y/n)`,
             ),
             ms: 30_000,

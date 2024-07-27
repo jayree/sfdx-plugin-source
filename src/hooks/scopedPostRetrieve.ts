@@ -26,14 +26,14 @@ type HookOptions = {
   config: Config;
 };
 
-interface FileResponseSuccessWithRequiredPath extends FileResponseSuccess {
+type FileResponseSuccessWithRequiredPath = {
   filePath: string;
-}
+} & FileResponseSuccess;
 
 export const scopedPostRetrieve: HookFunction = async function (options) {
   const dbgString = [this.config.bin, '@jayree/sfdx-plugin-source', 'hooks', 'scopedPostRetrieve'].join(':');
   const debug = Debug(dbgString);
-  debug(`called by: ${options.Command.id}`);
+  debug(`called by: ${options.Command.id as string}`);
 
   if (!options.result?.retrieveResult.response.status) {
     return;
