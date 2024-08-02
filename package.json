@@ -15,7 +15,7 @@
     "@salesforce/source-tracking": "^7.1.2",
     "@salesforce/ts-types": "^2.0.10",
     "ansis": "^3.2.0",
-    "debug": "^4.3.4",
+    "debug": "^4.3.6",
     "deep-object-diff": "^1.1.9",
     "fast-xml-parser": "^4.4.1",
     "fs-extra": "^11.2.0",
