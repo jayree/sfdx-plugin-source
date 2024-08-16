@@ -13,7 +13,7 @@
     "@salesforce/sf-plugins-core": "^11.3.2",
     "@salesforce/source-deploy-retrieve": "^12.1.12",
     "@salesforce/source-tracking": "^7.1.6",
-    "@salesforce/ts-types": "^2.0.10",
+    "@salesforce/ts-types": "^2.0.11",
     "ansis": "^3.2.0",
     "debug": "^4.3.6",
     "deep-object-diff": "^1.1.9",
@@ -27,7 +27,7 @@
   "devDependencies": {
     "@oclif/plugin-command-snapshot": "^5.2.12",
     "@oclif/plugin-help": "^6.2.8",
-    "@salesforce/dev-scripts": "^10.2.4",
+    "@salesforce/dev-scripts": "^10.2.9",
     "@salesforce/ts-sinon": "^1.4.24",
     "@types/debug": "^4.1.12",
     "@types/fs-extra": "^11.0.4",
