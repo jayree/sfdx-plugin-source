@@ -12,7 +12,7 @@
     "@salesforce/kit": "^3.2.1",
     "@salesforce/sf-plugins-core": "^11.3.4",
     "@salesforce/source-deploy-retrieve": "^12.6.0",
-    "@salesforce/source-tracking": "^7.1.7",
+    "@salesforce/source-tracking": "^7.1.10",
     "@salesforce/ts-types": "^2.0.11",
     "ansis": "^3.2.0",
     "debug": "^4.3.6",
