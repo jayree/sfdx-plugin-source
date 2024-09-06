@@ -1550,7 +1550,7 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@oclif/core@^4", "@oclif/core@^4.0.18", "@oclif/core@^4.0.19", "@oclif/core@^4.0.20":
+"@oclif/core@^4", "@oclif/core@^4.0.19", "@oclif/core@^4.0.20":
   version "4.0.20"
   resolved "https://registry.yarnpkg.com/@oclif/core/-/core-4.0.20.tgz#0c7fd743720c39b33b194b5b335c7ffa3a4fffee"
   integrity sha512-N1RKI/nteiEbd/ilyv/W1tz82SEAeXeQ5oZpdU/WgLrDilHH7cicrT/NBLextJJhH3QTC+1oan0Z5vNzkX6lGA==
@@ -1722,7 +1722,7 @@
     string-width "^7.2.0"
     terminal-link "^3.0.0"
 
-"@salesforce/source-deploy-retrieve@^12.5.1", "@salesforce/source-deploy-retrieve@^12.6.0":
+"@salesforce/source-deploy-retrieve@^12.6.0":
   version "12.6.0"
   resolved "https://registry.yarnpkg.com/@salesforce/source-deploy-retrieve/-/source-deploy-retrieve-12.6.0.tgz#0d2961fb2befeac0431fe8f6a70f439bc049fcea"
   integrity sha512-gowMwjG93a8Bd5N05o46Z46TSsHZMeZXV3rQwMP3LXDnIhvSx3vxHJMzk0KKMOatfQFF2t+YI/6MR+47KWSblw==
@@ -1741,15 +1741,15 @@
     minimatch "^9.0.5"
     proxy-agent "^6.4.0"
 
-"@salesforce/source-tracking@^7.1.10":
-  version "7.1.10"
-  resolved "https://registry.yarnpkg.com/@salesforce/source-tracking/-/source-tracking-7.1.10.tgz#fa6836ee340710a82052942a751231ac98460a86"
-  integrity sha512-+rVH0N4aPPw5fHYBVhGM8V4BbOuq40GzsUZKf8bUj417Ccc5BaPfBJa417FK5sqW5xIapMpid8kM2uyGeVHVqQ==
+"@salesforce/source-tracking@^7.1.12":
+  version "7.1.12"
+  resolved "https://registry.yarnpkg.com/@salesforce/source-tracking/-/source-tracking-7.1.12.tgz#0b25fae9ffa3b0f4d2545074b317a5a9b35566cd"
+  integrity sha512-TNrgseMgSPgBXFh7kgUqkeANetDPXkCzVt6ZLmTRpVF77J/j3L+4eXemSj+c7F6V0leqTstyp229dbbChMlFaQ==
   dependencies:
-    "@oclif/core" "^4.0.18"
-    "@salesforce/core" "^8.4.0"
+    "@oclif/core" "^4.0.19"
+    "@salesforce/core" "^8.5.4"
     "@salesforce/kit" "^3.2.1"
-    "@salesforce/source-deploy-retrieve" "^12.5.1"
+    "@salesforce/source-deploy-retrieve" "^12.6.0"
     "@salesforce/ts-types" "^2.0.12"
     fast-xml-parser "^4.4.1"
     graceful-fs "^4.2.11"
