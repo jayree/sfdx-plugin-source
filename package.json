@@ -28,7 +28,7 @@
     "@oclif/plugin-command-snapshot": "^5.2.15",
     "@oclif/plugin-help": "^6.2.11",
     "@salesforce/dev-scripts": "^10.2.10",
-    "@salesforce/ts-sinon": "^1.4.26",
+    "@salesforce/ts-sinon": "^1.4.27",
     "@types/debug": "^4.1.12",
     "@types/fs-extra": "^11.0.4",
     "@types/object-path": "^0.11.4",
