@@ -1429,7 +1429,7 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@oclif/core@^4", "@oclif/core@^4.0.23", "@oclif/core@^4.0.27", "@oclif/core@^4.0.31":
+"@oclif/core@^4", "@oclif/core@^4.0.27", "@oclif/core@^4.0.31":
   version "4.0.31"
   resolved "https://registry.yarnpkg.com/@oclif/core/-/core-4.0.31.tgz#3f7ac806f27de6a87a7ee7caab8826687ce50412"
   integrity sha512-7oyIZv/C1TP+fPc2tSzVPYqG1zU+nel1QvJxjAWyVhud0J8B5SpKZnryedxs3nlSVPJ6K1MT31C9esupCBYgZw==
@@ -1624,7 +1624,7 @@
     string-width "^7.2.0"
     terminal-link "^3.0.0"
 
-"@salesforce/source-deploy-retrieve@^12.10.1", "@salesforce/source-deploy-retrieve@^12.8.1":
+"@salesforce/source-deploy-retrieve@^12.10.0", "@salesforce/source-deploy-retrieve@^12.10.1":
   version "12.10.1"
   resolved "https://registry.yarnpkg.com/@salesforce/source-deploy-retrieve/-/source-deploy-retrieve-12.10.1.tgz#bf20f2e92935ddc886b980c1b0d57e84ebe0f3ba"
   integrity sha512-X4iwRnC9rkbZnK6brbY3lydgbJK44x4e7Bl4EEPNi6SOPdzkKBqTh7TiR7I2ftY0iiBrH0zWHrWMiNeCtQMWbA==
@@ -1643,15 +1643,15 @@
     minimatch "^9.0.5"
     proxy-agent "^6.4.0"
 
-"@salesforce/source-tracking@^7.1.18":
-  version "7.1.18"
-  resolved "https://registry.yarnpkg.com/@salesforce/source-tracking/-/source-tracking-7.1.18.tgz#795f71cbb9ed1a22aa1ba3b7bc318455f5992bab"
-  integrity sha512-NlLRoOgmm83I353je9pp4Opi599RP90a3yG+5qDYcE8dh+Ks5cwfxMf9ZKFaAFKP2DM3lvBr1WCY7sGq784obQ==
+"@salesforce/source-tracking@^7.1.20":
+  version "7.1.20"
+  resolved "https://registry.yarnpkg.com/@salesforce/source-tracking/-/source-tracking-7.1.20.tgz#47453bd86a6a9007b7940e8d87ded22eba0c4df1"
+  integrity sha512-hbYS+xhz8x1i54vUgSOEViVowY8dfYdnUl4WGurYNV4EoWH+E1G8mCAP+JoUOSDYwwBmq1D4ags/C8Wh0BDdqQ==
   dependencies:
-    "@oclif/core" "^4.0.23"
+    "@oclif/core" "^4.0.31"
     "@salesforce/core" "^8.6.4"
     "@salesforce/kit" "^3.2.3"
-    "@salesforce/source-deploy-retrieve" "^12.8.1"
+    "@salesforce/source-deploy-retrieve" "^12.10.0"
     "@salesforce/ts-types" "^2.0.12"
     fast-xml-parser "^4.5.0"
     graceful-fs "^4.2.11"
