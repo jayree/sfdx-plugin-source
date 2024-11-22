@@ -1794,7 +1794,7 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@oclif/core@^4", "@oclif/core@^4.0.27", "@oclif/core@^4.0.31", "@oclif/core@^4.0.32":
+"@oclif/core@^4", "@oclif/core@^4.0.27", "@oclif/core@^4.0.32":
   version "4.0.32"
   resolved "https://registry.yarnpkg.com/@oclif/core/-/core-4.0.32.tgz#0e8078c53b079549d685798893b9f9534ca69bf6"
   integrity sha512-O3jfIAhqaJxXI2dzF81PLTMhKpFFA0Nyz8kfBnc9WYDJnvdmXK0fVAOSpwpi2mHTow/9FXxY6Kww8+Kbe7/sag==
@@ -2008,13 +2008,13 @@
     minimatch "^9.0.5"
     proxy-agent "^6.4.0"
 
-"@salesforce/source-tracking@^7.1.21":
-  version "7.1.21"
-  resolved "https://registry.yarnpkg.com/@salesforce/source-tracking/-/source-tracking-7.1.21.tgz#88995a64242292ed70f0079f2139ddf4d873b582"
-  integrity sha512-eiN7yJuMFZWvaIOFcEfJYFCLf/ptueGwTMXt951rbyycFW79QOhB7Z/QTk58SPca3wi1s9b7MiwYCh90rTu9Fg==
+"@salesforce/source-tracking@^7.1.24":
+  version "7.1.24"
+  resolved "https://registry.yarnpkg.com/@salesforce/source-tracking/-/source-tracking-7.1.24.tgz#19113db90ff37ca71374a431a740c399729b9ddb"
+  integrity sha512-U5alyBkVkjdVmBrNLm6/yFq8o0EUJWC3w6gU43nnC42ZFY9lCXYFIkTqd8pGRAA4OsCaORxC5s0Px/AVOjY1qQ==
   dependencies:
-    "@oclif/core" "^4.0.31"
-    "@salesforce/core" "^8.6.4"
+    "@oclif/core" "^4.0.32"
+    "@salesforce/core" "^8.8.0"
     "@salesforce/kit" "^3.2.3"
     "@salesforce/source-deploy-retrieve" "^12.10.1"
     "@salesforce/ts-types" "^2.0.12"
