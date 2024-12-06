@@ -2008,19 +2008,19 @@
     minimatch "^9.0.5"
     proxy-agent "^6.4.0"
 
-"@salesforce/source-tracking@^7.2.0":
-  version "7.2.0"
-  resolved "https://registry.yarnpkg.com/@salesforce/source-tracking/-/source-tracking-7.2.0.tgz#e87982e8bdb68aa64f5c249d500b1a8b6a9730a7"
-  integrity sha512-PK/j/OOH6EBaHZQOXyheqvYmDbm960dP8Iwp2zbxFcHRHCKQIcIT1rLMtdSX8bBonVC6bGyBLaEae8Ak7Pmhcg==
+"@salesforce/source-tracking@^7.3.0":
+  version "7.3.0"
+  resolved "https://registry.yarnpkg.com/@salesforce/source-tracking/-/source-tracking-7.3.0.tgz#513cd92221441419ed92200b5c1c1942fb0d7761"
+  integrity sha512-kqAnp8bKPdSERa+OOzPviS/w5JL7DKP6JAg2wR9W3beW4eBVAwBGYlkAAXXXUIv8T4Fj7xGgYNF+7BlWxMkafA==
   dependencies:
-    "@oclif/core" "^4.0.32"
+    "@oclif/core" "^4.0.33"
     "@salesforce/core" "^8.8.0"
     "@salesforce/kit" "^3.2.3"
     "@salesforce/source-deploy-retrieve" "^12.10.2"
     "@salesforce/ts-types" "^2.0.12"
     fast-xml-parser "^4.5.0"
     graceful-fs "^4.2.11"
-    isomorphic-git "^1.27.1"
+    isomorphic-git "^1.27.2"
     ts-retry-promise "^0.8.1"
 
 "@salesforce/ts-sinon@^1.4.30":
@@ -5829,10 +5829,10 @@ isexe@^2.0.0:
   resolved "https://registry.yarnpkg.com/isexe/-/isexe-2.0.0.tgz#e8fbf374dc556ff8947a10dcb0572d633f2cfa10"
   integrity sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==
 
-isomorphic-git@^1.27.1:
-  version "1.27.1"
-  resolved "https://registry.yarnpkg.com/isomorphic-git/-/isomorphic-git-1.27.1.tgz#a2752fce23a09f04baa590c41cfaf61e973405b3"
-  integrity sha512-X32ph5zIWfT75QAqW2l3JCIqnx9/GWd17bRRehmn3qmWc34OYbSXY6Cxv0o9bIIY+CWugoN4nQFHNA+2uYf2nA==
+isomorphic-git@^1.27.2:
+  version "1.27.2"
+  resolved "https://registry.yarnpkg.com/isomorphic-git/-/isomorphic-git-1.27.2.tgz#969727adf4e81ec313974e9ebe2d1d0982b25c7f"
+  integrity sha512-nCiz+ieOkWb5kDJSSckDTiMjTcgkxqH2xuiQmw1Y6O/spwx4d6TKYSfGCd4f71HGvUYcRSUGqJEI+3uN6UQlOw==
   dependencies:
     async-lock "^1.4.1"
     clean-git-ref "^2.0.1"
@@ -5841,6 +5841,7 @@ isomorphic-git@^1.27.1:
     ignore "^5.1.4"
     minimisted "^2.0.0"
     pako "^1.0.10"
+    path-browserify "^1.0.1"
     pify "^4.0.1"
     readable-stream "^3.4.0"
     sha.js "^2.4.9"
@@ -7131,6 +7132,11 @@ patch-package@^8.0.0:
     slash "^2.0.0"
     tmp "^0.0.33"
     yaml "^2.2.2"
+
+path-browserify@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/path-browserify/-/path-browserify-1.0.1.tgz#d98454a9c3753d5790860f16f68867b9e46be1fd"
+  integrity sha512-b7uo2UCUOYZcnF/3ID0lulOJi/bafxa1xPe7ZPsammBSpjSWQkjNxlt635YGS2MiR9GjvuXCtz2emr3jbsz98g==
 
 path-case@^3.0.4:
   version "3.0.4"
