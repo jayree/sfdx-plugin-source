@@ -1,3 +1,11 @@
+## [1.3.91](https://github.com/jayree/sfdx-plugin-source/compare/v1.3.90...v1.3.91) (2024-12-27)
+
+
+### Bug Fixes
+
+* **deps:** bump @salesforce/source-tracking from 7.3.2 to 7.3.4 ([#951](https://github.com/jayree/sfdx-plugin-source/issues/951)) ([03ec454](https://github.com/jayree/sfdx-plugin-source/commit/03ec454efb0765a1ef11f64026e0cbda573a6cec))
+* **deps:** bump ansis from 3.4.0 to 3.5.1 ([#950](https://github.com/jayree/sfdx-plugin-source/issues/950)) ([4528b9d](https://github.com/jayree/sfdx-plugin-source/commit/4528b9dd12b8f92000f8880a1445149376eee62d))
+
 ## [1.3.90](https://github.com/jayree/sfdx-plugin-source/compare/v1.3.89...v1.3.90) (2024-12-20)
 
 
