@@ -1,3 +1,11 @@
+## [1.3.92](https://github.com/jayree/sfdx-plugin-source/compare/v1.3.91...v1.3.92) (2025-01-03)
+
+
+### Bug Fixes
+
+* **deps:** bump @salesforce/source-deploy-retrieve ([#958](https://github.com/jayree/sfdx-plugin-source/issues/958)) ([5f01837](https://github.com/jayree/sfdx-plugin-source/commit/5f018376e4c72aa416bd36f61e3bf73aa88f18d1))
+* **deps:** bump ansis from 3.5.1 to 3.5.2 ([#959](https://github.com/jayree/sfdx-plugin-source/issues/959)) ([eb77f8a](https://github.com/jayree/sfdx-plugin-source/commit/eb77f8aacee8cc82d1de0e2835ff6e8d660d366b))
+
 ## [1.3.91](https://github.com/jayree/sfdx-plugin-source/compare/v1.3.90...v1.3.91) (2024-12-27)
 
 
