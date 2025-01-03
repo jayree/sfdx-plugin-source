@@ -2705,12 +2705,7 @@ ansi-styles@^6.1.0, ansi-styles@^6.2.1:
   resolved "https://registry.yarnpkg.com/ansi-styles/-/ansi-styles-6.2.1.tgz#0e62320cf99c21afff3b3012192546aacbfb05c5"
   integrity sha512-bN798gFfQX+viw3R7yrGWRqnrN2oRkEkUjjl4JNn4E8GxxbjtG3FbrEIIY3l8/hrwUwIeCZvi4QuOTP4MErVug==
 
-ansis@^3.3.2, ansis@^3.4.0, ansis@^3.5.1:
-  version "3.5.1"
-  resolved "https://registry.yarnpkg.com/ansis/-/ansis-3.5.1.tgz#70f501599c6424311601ff6b319f4b0a6570fb33"
-  integrity sha512-sfej1OZ6XF7964SpnVmj7bIUnN+P3YbnxXiRYxQgjuuWW9uH+a8OVtxX2ToRQoSBBKvdYApgAcDmm2JEh1xr3w==
-
-ansis@^3.5.2:
+ansis@^3.3.2, ansis@^3.4.0, ansis@^3.5.2:
   version "3.5.2"
   resolved "https://registry.yarnpkg.com/ansis/-/ansis-3.5.2.tgz#d7a1f95a23f6becc5ee16fab85cda41c898fad96"
   integrity sha512-5uGcUZRbORJeEppVdWfZOSybTMz+Ou+84HepgK081Yk5+pPMMzWf/XGxiAT6bfBqCghRB4MwBtYn0CHqINRVag==
