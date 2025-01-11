@@ -1,3 +1,10 @@
+## [1.3.94](https://github.com/jayree/sfdx-plugin-source/compare/v1.3.93...v1.3.94) (2025-01-11)
+
+
+### Bug Fixes
+
+* **deps:** bump ignore from 5.3.2 to 7.0.0 ([#954](https://github.com/jayree/sfdx-plugin-source/issues/954)) ([5c40b4c](https://github.com/jayree/sfdx-plugin-source/commit/5c40b4c803a22740b379fba7f6b491469247ec8c))
+
 ## [1.3.93](https://github.com/jayree/sfdx-plugin-source/compare/v1.3.92...v1.3.93) (2025-01-10)
 
 
