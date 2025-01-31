@@ -1702,7 +1702,7 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@oclif/core@^4", "@oclif/core@^4.0.27", "@oclif/core@^4.2.3", "@oclif/core@^4.2.5":
+"@oclif/core@^4", "@oclif/core@^4.0.27", "@oclif/core@^4.2.3", "@oclif/core@^4.2.4", "@oclif/core@^4.2.5":
   version "4.2.5"
   resolved "https://registry.yarnpkg.com/@oclif/core/-/core-4.2.5.tgz#6b51e1db17272204b2431fee3eba93a21d59ebbe"
   integrity sha512-bdXOojq8GaPnWnDgVOw030JlUROJEiDLXiV3XUUGUQDEp6YpVQvEYLIrUsEvyfASU3z3FGg3DC9k0kprcOYdhw==
@@ -1897,7 +1897,7 @@
     string-width "^7.2.0"
     terminal-link "^3.0.0"
 
-"@salesforce/source-deploy-retrieve@^12.12.4", "@salesforce/source-deploy-retrieve@^12.14.1":
+"@salesforce/source-deploy-retrieve@^12.14.0", "@salesforce/source-deploy-retrieve@^12.14.1":
   version "12.14.1"
   resolved "https://registry.yarnpkg.com/@salesforce/source-deploy-retrieve/-/source-deploy-retrieve-12.14.1.tgz#9067388b1eb9fadda7e6ccd894e9d1bb0e8407d5"
   integrity sha512-8POp6tqoeciDFAv7a40LG21aHZ2XGHvX0/ySqcjcAVhTVhVhcP0EpC+qO+SSKjB6Ocf0/6iXMo5ciU2Eq32ydw==
@@ -1917,15 +1917,15 @@
     proxy-agent "^6.4.0"
     yaml "^2.6.1"
 
-"@salesforce/source-tracking@^7.3.9":
-  version "7.3.9"
-  resolved "https://registry.yarnpkg.com/@salesforce/source-tracking/-/source-tracking-7.3.9.tgz#baf13f0847a5fcd4298ed086db509e596e4c9a66"
-  integrity sha512-nGVDtwzU3sj4IgA/crULC5NS6NeqBsmuTMlXDh+u2VgRpu+OB8QvSRGnhY4G2ctPE/hlYf9iOHfT0gDzqX/SZw==
+"@salesforce/source-tracking@^7.3.11":
+  version "7.3.11"
+  resolved "https://registry.yarnpkg.com/@salesforce/source-tracking/-/source-tracking-7.3.11.tgz#2bb1a35d5834ea9940435aee0f197b1a4f3efc91"
+  integrity sha512-e7UfuwCsLzzNkN+NCtWF3bAWyf9WA/MsHD4sEq5F70dHDerw+W6L1M+16H4YXt9o8rPp7HKj6g615rYoy7PykA==
   dependencies:
-    "@oclif/core" "^4.2.3"
+    "@oclif/core" "^4.2.4"
     "@salesforce/core" "^8.8.2"
     "@salesforce/kit" "^3.2.3"
-    "@salesforce/source-deploy-retrieve" "^12.12.4"
+    "@salesforce/source-deploy-retrieve" "^12.14.0"
     "@salesforce/ts-types" "^2.0.12"
     fast-xml-parser "^4.5.1"
     graceful-fs "^4.2.11"
