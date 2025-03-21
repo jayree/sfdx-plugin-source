@@ -1829,10 +1829,10 @@
     string-width "^7.2.0"
     terminal-link "^3.0.0"
 
-"@salesforce/source-deploy-retrieve@^12.15.0", "@salesforce/source-deploy-retrieve@^12.16.6":
-  version "12.16.6"
-  resolved "https://registry.yarnpkg.com/@salesforce/source-deploy-retrieve/-/source-deploy-retrieve-12.16.6.tgz#59237914564bf1c0a418089c4cc0a0498f01f9cc"
-  integrity sha512-k0DHARp4dKUjn5JVSBF6YYfpBNU3jooRblXIoRN074gIeJs8mUcK4y5lL7Eck9FW0CPjbgWq7+5StvYQxFIODw==
+"@salesforce/source-deploy-retrieve@^12.16.10", "@salesforce/source-deploy-retrieve@^12.16.6":
+  version "12.16.10"
+  resolved "https://registry.yarnpkg.com/@salesforce/source-deploy-retrieve/-/source-deploy-retrieve-12.16.10.tgz#b38ee71f9e5691212beae6575078ec8459b59a00"
+  integrity sha512-O1K5I5ZmMTfCZ4SV+/w5iWMjGsHSU+PtHCx7gJVcgH8emY25OUhxrQPqb7BS2jupKQZy6U6hhVhkcD9yYqClag==
   dependencies:
     "@salesforce/core" "^8.8.5"
     "@salesforce/kit" "^3.2.3"
@@ -1848,7 +1848,7 @@
     mime "2.6.0"
     minimatch "^9.0.5"
     proxy-agent "^6.4.0"
-    yaml "^2.6.1"
+    yaml "^2.7.0"
 
 "@salesforce/source-tracking@^7.3.17":
   version "7.3.17"
@@ -5423,12 +5423,7 @@ ignore@^5.1.1, ignore@^5.1.4, ignore@^5.2.0, ignore@^5.2.4, ignore@^5.3.0, ignor
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-5.3.2.tgz#3cd40e729f3643fd87cb04e50bf0eb722bc596f5"
   integrity sha512-hsBTNUqQTDwkWtcdYI2i06Y/nUBEsNEDJKjWdigLvegy8kDuJAS8uRlpkkcQpyEXL0Z/pjDy5HBmMjRCJ2gq+g==
 
-ignore@^7.0.0:
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/ignore/-/ignore-7.0.0.tgz#52da780b009bd0845d1f9dd4d8ae6a7569ae73c4"
-  integrity sha512-lcX8PNQygAa22u/0BysEY8VhaFRzlOkvdlKczDPnJvrkJD1EuqzEky5VYYKM2iySIuaVIDv9N190DfSreSLw2A==
-
-ignore@^7.0.3:
+ignore@^7.0.0, ignore@^7.0.3:
   version "7.0.3"
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-7.0.3.tgz#397ef9315dfe0595671eefe8b633fec6943ab733"
   integrity sha512-bAH5jbK/F3T3Jls4I0SO1hmPR0dKU0a7+SY6n1yzRtG54FLO8d6w/nxLFX2Nb7dBu6cCWXPaAME6cYqFUMmuCA==
@@ -8818,7 +8813,7 @@ yallist@^4.0.0:
   resolved "https://registry.yarnpkg.com/yallist/-/yallist-4.0.0.tgz#9bb92790d9c0effec63be73519e11a35019a3a72"
   integrity sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==
 
-yaml@^2.2.2, yaml@^2.4.5, yaml@^2.6.1:
+yaml@^2.2.2, yaml@^2.4.5, yaml@^2.7.0:
   version "2.7.0"
   resolved "https://registry.yarnpkg.com/yaml/-/yaml-2.7.0.tgz#aef9bb617a64c937a9a748803786ad8d3ffe1e98"
   integrity sha512-+hSoy/QHluxmC9kCIJyL/uyFmLmc+e5CFR5Wa+bpIhIj85LVb9ZH2nVnqrHoSvKogwODv0ClqZkmiSSaIH5LTA==
