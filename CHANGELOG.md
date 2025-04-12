@@ -1,3 +1,12 @@
+## [1.3.106](https://github.com/jayree/sfdx-plugin-source/compare/v1.3.105...v1.3.106) (2025-04-12)
+
+
+### Bug Fixes
+
+* **deps:** bump @jayree/changelog from 1.2.7 to 1.2.8 ([#1076](https://github.com/jayree/sfdx-plugin-source/issues/1076)) ([a4c6e1d](https://github.com/jayree/sfdx-plugin-source/commit/a4c6e1dc90d9c8c8cf7cfb54c415b301deae7b6b))
+* **deps:** bump @salesforce/core from 8.8.7 to 8.9.0 ([#1072](https://github.com/jayree/sfdx-plugin-source/issues/1072)) ([9685d1b](https://github.com/jayree/sfdx-plugin-source/commit/9685d1bb80e2dedcf9f2ba6be3ace61efbc3b456))
+* **deps:** bump @salesforce/source-tracking from 7.3.19 to 7.3.20 ([#1069](https://github.com/jayree/sfdx-plugin-source/issues/1069)) ([f742780](https://github.com/jayree/sfdx-plugin-source/commit/f74278095ac672dce8af6491954b34b06fadc2f0))
+
 ## [1.3.105](https://github.com/jayree/sfdx-plugin-source/compare/v1.3.104...v1.3.105) (2025-03-28)
 
 
