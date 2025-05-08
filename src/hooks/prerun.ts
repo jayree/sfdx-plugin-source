@@ -65,10 +65,9 @@ export const prerun: Hook<'prerun'> = async function (options) {
       const userName = (await getConnectionFromArgv(options.argv)).username;
       const org = await Org.create({ aliasOrUsername: userName });
       try {
-        storedServerMaxRevisionCounterPath = await getCurrentStateFolderFilePath(
+        storedServerMaxRevisionCounterPath = getCurrentStateFolderFilePath(
           projectPath,
           path.join('orgs', org.getOrgId(), 'jayreeStoredMaxRevision.json'),
-          true,
         );
 
         try {
@@ -98,10 +97,9 @@ export const prerun: Hook<'prerun'> = async function (options) {
           try {
             // eslint-disable-next-line @typescript-eslint/no-shadow
             const { serverMaxRevisionCounter } = (await fs.readJSON(
-              await getCurrentStateFolderFilePath(
+              getCurrentStateFolderFilePath(
                 projectPath,
                 path.join('orgs', (await Org.create({ aliasOrUsername: userName })).getOrgId(), 'maxRevision.json'),
-                false,
               ),
             )) as { serverMaxRevisionCounter: number };
             localServerMaxRevisionCounter = serverMaxRevisionCounter;

@@ -38,10 +38,9 @@ $ sfdx jayree:source:tracking:store:get -u me@my.org`,
     const org = flags['target-org'];
 
     const { serverMaxRevisionCounter } = (await fs.readJSON(
-      await getCurrentStateFolderFilePath(
+      getCurrentStateFolderFilePath(
         this.project?.getPath(),
         join('orgs', org.getOrgId(), 'jayreeStoredMaxRevision.json'),
-        true,
       ),
       { throws: false },
     )) as { serverMaxRevisionCounter: number };
