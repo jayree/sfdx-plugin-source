@@ -4629,6 +4629,13 @@ fast-xml-parser@^4.5.3:
   dependencies:
     strnum "^1.1.1"
 
+fast-xml-parser@^5.2.1:
+  version "5.2.1"
+  resolved "https://registry.yarnpkg.com/fast-xml-parser/-/fast-xml-parser-5.2.1.tgz#d6a4f9eac066dc0987bbcfe4ca050ef8f7f67137"
+  integrity sha512-Kqq/ewnRACQ20e0BlQ5KqHRYWRBp7yv+jttK4Yj2yY+2ldgCoxJkrP1NHUhjypsJ+eQXlGJ/jebM3wa60s1rbQ==
+  dependencies:
+    strnum "^2.0.5"
+
 fastest-levenshtein@^1.0.7:
   version "1.0.16"
   resolved "https://registry.yarnpkg.com/fastest-levenshtein/-/fastest-levenshtein-1.0.16.tgz#210e61b6ff181de91ea9b3d1b84fdedd47e034e5"
@@ -8042,6 +8049,11 @@ strnum@^1.0.5, strnum@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/strnum/-/strnum-1.1.1.tgz#6b312934054594dd611bd18d9bcce5053a7caaee"
   integrity sha512-O7aCHfYCamLCctjAiaucmE+fHf2DYHkus2OKCn4Wv03sykfFtgeECn505X6K4mPl8CRNd/qurC9guq+ynoN4pw==
+
+strnum@^2.0.5:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/strnum/-/strnum-2.1.0.tgz#12c2c6de59d3820a8128b486c9c106c1bf6c4924"
+  integrity sha512-w0S//9BqZZGw0L0Y8uLSelFGnDJgTyyNQLmSlPnVz43zPAiqu3w4t8J8sDqqANOGeZIZ/9jWuPguYcEnsoHv4A==
 
 supports-color@^5.3.0, supports-color@^5.4.0:
   version "5.5.0"
