@@ -10,6 +10,7 @@ import {
   SfCommand,
   requiredOrgFlagWithDeprecations,
   orgApiVersionFlagWithDeprecations,
+  convertToNewTableAPI,
 } from '@salesforce/sf-plugins-core';
 import { Messages } from '@salesforce/core';
 import { AnyJson } from '@salesforce/ts-types';
@@ -188,28 +189,30 @@ $ sfdx jayree:source:tracking:list -u me@my.org -r 101`,
     this.styledHeader(
       ansis.blue(`SourceMember revision counter numbers list for: ${org.getUsername() as string}/${org.getOrgId()}`),
     );
-    this.table(sourceMemberResults, {
-      REVISIONCOUNTER: {
-        header: 'REVISIONCOUNTER',
-        get: (row) => row.RevisionCounterString,
-      },
-      ID: {
-        header: 'ID',
-        get: (row) => row.Id,
-      },
-      'FULL NAME': {
-        header: 'FULL NAME',
-        get: (row) => row.MemberName,
-      },
-      TYPE: {
-        header: 'TYPE',
-        get: (row) => row.MemberType,
-      },
-      OBSOLETE: {
-        header: 'OBSOLETE',
-        get: (row) => (row.IsNameObsolete as boolean).toString(),
-      },
-    });
+    this.table(
+      convertToNewTableAPI(sourceMemberResults, {
+        REVISIONCOUNTER: {
+          header: 'REVISIONCOUNTER',
+          get: (row) => row.RevisionCounterString,
+        },
+        ID: {
+          header: 'ID',
+          get: (row) => row.Id,
+        },
+        'FULL NAME': {
+          header: 'FULL NAME',
+          get: (row) => row.MemberName,
+        },
+        TYPE: {
+          header: 'TYPE',
+          get: (row) => row.MemberType,
+        },
+        OBSOLETE: {
+          header: 'OBSOLETE',
+          get: (row) => (row.IsNameObsolete as boolean).toString(),
+        },
+      }),
+    );
 
     sourceMemberResults.forEach((sourceMember) => {
       delete sourceMember.RevisionNum;

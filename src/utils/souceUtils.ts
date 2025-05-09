@@ -9,7 +9,7 @@ import os from 'node:os';
 import fs from 'fs-extra';
 import { SfError, SfProject } from '@salesforce/core';
 import kit from '@salesforce/kit';
-import { Ux } from '@salesforce/sf-plugins-core';
+import { convertToNewTableAPI, Ux } from '@salesforce/sf-plugins-core';
 import { globby } from 'globby';
 import { Org, ConfigAggregator, Connection, OrgConfigProperties } from '@salesforce/core';
 import ansis from 'ansis';
@@ -187,18 +187,20 @@ export async function logFixes(updatedfiles: aggregatedFixResults): Promise<void
     Object.keys(updatedfiles).forEach((task) => {
       if (updatedfiles[task].length) {
         ux.styledHeader(ansis.blue(`Fixed Source: ${task}`));
-        ux.table(updatedfiles[task], {
-          filePath: {
-            header: 'FILEPATH',
-            get: (row: fixResult) => path.relative(root, row.filePath),
-          },
-          operation: {
-            header: 'OPERATION',
-          },
-          message: {
-            header: 'MESSAGE',
-          },
-        });
+        ux.table(
+          convertToNewTableAPI(updatedfiles[task], {
+            filePath: {
+              header: 'FILEPATH',
+              get: (row: fixResult) => path.relative(root, row.filePath),
+            },
+            operation: {
+              header: 'OPERATION',
+            },
+            message: {
+              header: 'MESSAGE',
+            },
+          }),
+        );
       }
     });
   }
