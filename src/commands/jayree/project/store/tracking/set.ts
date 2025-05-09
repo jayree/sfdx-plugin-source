@@ -10,6 +10,7 @@ import {
   SfCommand,
   requiredOrgFlagWithDeprecations,
   orgApiVersionFlagWithDeprecations,
+  convertToNewTableAPI,
 } from '@salesforce/sf-plugins-core';
 import { Messages } from '@salesforce/core';
 import { AnyJson } from '@salesforce/ts-types';
@@ -73,27 +74,29 @@ $ sfdx jayree:source:tracking:store:set -u MyTestOrg1 -r 101`,
 
     this.styledHeader(ansis.blue('Set stored SourceMember revision counter number'));
     this.table(
-      [
+      convertToNewTableAPI(
+        [
+          {
+            username: org.getUsername(),
+            orgid: org.getOrgId(),
+            serverMaxRevisionCounter: newMaxRev.toString(),
+          },
+        ],
         {
-          username: org.getUsername(),
-          orgid: org.getOrgId(),
-          serverMaxRevisionCounter: newMaxRev.toString(),
+          Username: {
+            header: 'Username',
+            get: (row) => row.username,
+          },
+          OrgId: {
+            header: 'OrgId',
+            get: (row) => row.orgid,
+          },
+          RevisionCounter: {
+            header: 'RevisionCounter',
+            get: (row) => row.serverMaxRevisionCounter,
+          },
         },
-      ],
-      {
-        Username: {
-          header: 'Username',
-          get: (row) => row.username,
-        },
-        OrgId: {
-          header: 'OrgId',
-          get: (row) => row.orgid,
-        },
-        RevisionCounter: {
-          header: 'RevisionCounter',
-          get: (row) => row.serverMaxRevisionCounter,
-        },
-      },
+      ),
     );
 
     return {

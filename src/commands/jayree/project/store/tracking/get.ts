@@ -5,7 +5,7 @@
  * For full license text, see LICENSE.txt file in the repo root or https://opensource.org/licenses/BSD-3-Clause
  */
 import { join } from 'node:path';
-import { SfCommand, requiredOrgFlagWithDeprecations } from '@salesforce/sf-plugins-core';
+import { SfCommand, convertToNewTableAPI, requiredOrgFlagWithDeprecations } from '@salesforce/sf-plugins-core';
 import { Messages } from '@salesforce/core';
 import { AnyJson } from '@salesforce/ts-types';
 import fs from 'fs-extra';
@@ -46,27 +46,29 @@ $ sfdx jayree:source:tracking:store:get -u me@my.org`,
     )) as { serverMaxRevisionCounter: number };
     this.styledHeader(ansis.blue('Get stored SourceMember revision counter number'));
     this.table(
-      [
+      convertToNewTableAPI(
+        [
+          {
+            username: org.getUsername(),
+            orgid: org.getOrgId(),
+            serverMaxRevisionCounter: serverMaxRevisionCounter.toString(),
+          },
+        ],
         {
-          username: org.getUsername(),
-          orgid: org.getOrgId(),
-          serverMaxRevisionCounter: serverMaxRevisionCounter.toString(),
+          Username: {
+            header: 'Username',
+            get: (row) => row.username,
+          },
+          OrgId: {
+            header: 'OrgId',
+            get: (row) => row.orgid,
+          },
+          RevisionCounter: {
+            header: 'RevisionCounter',
+            get: (row) => row.serverMaxRevisionCounter,
+          },
         },
-      ],
-      {
-        Username: {
-          header: 'Username',
-          get: (row) => row.username,
-        },
-        OrgId: {
-          header: 'OrgId',
-          get: (row) => row.orgid,
-        },
-        RevisionCounter: {
-          header: 'RevisionCounter',
-          get: (row) => row.serverMaxRevisionCounter,
-        },
-      },
+      ),
     );
     return {
       revision: serverMaxRevisionCounter,
