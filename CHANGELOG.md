@@ -1,3 +1,11 @@
+## [1.3.114](https://github.com/jayree/sfdx-plugin-source/compare/v1.3.113...v1.3.114) (2025-05-30)
+
+
+### Bug Fixes
+
+* **deps:** bump @salesforce/core from 8.11.1 to 8.11.4 ([#1121](https://github.com/jayree/sfdx-plugin-source/issues/1121)) ([42a4386](https://github.com/jayree/sfdx-plugin-source/commit/42a43869427a18ec2c919405f4e8c73382dd36a0))
+* **deps:** bump ansis from 4.0.0 to 4.1.0 ([#1123](https://github.com/jayree/sfdx-plugin-source/issues/1123)) ([ba454b4](https://github.com/jayree/sfdx-plugin-source/commit/ba454b4d217542ffe9d8feff1653229abfda5942))
+
 ## [1.3.113](https://github.com/jayree/sfdx-plugin-source/compare/v1.3.112...v1.3.113) (2025-05-24)
 
 
