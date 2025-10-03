@@ -1,3 +1,10 @@
+## [1.3.133](https://github.com/jayree/sfdx-plugin-source/compare/v1.3.132...v1.3.133) (2025-10-03)
+
+
+### Bug Fixes
+
+* **deps:** bump ansis from 4.1.0 to 4.2.0 ([#1248](https://github.com/jayree/sfdx-plugin-source/issues/1248)) ([7e5bc26](https://github.com/jayree/sfdx-plugin-source/commit/7e5bc26fa307b8fa274ed06347ab1ff4dda8ad19))
+
 ## [1.3.132](https://github.com/jayree/sfdx-plugin-source/compare/v1.3.131...v1.3.132) (2025-09-26)
 
 
