@@ -1,3 +1,11 @@
+## [1.3.135](https://github.com/jayree/sfdx-plugin-source/compare/v1.3.134...v1.3.135) (2025-10-17)
+
+
+### Bug Fixes
+
+* **deps:** bump @oclif/core from 4.5.4 to 4.5.6 ([#1257](https://github.com/jayree/sfdx-plugin-source/issues/1257)) ([8e6adc8](https://github.com/jayree/sfdx-plugin-source/commit/8e6adc89d8228ca1f2d153728c97522c4d462b6d))
+* **deps:** bump @salesforce/source-deploy-retrieve ([#1258](https://github.com/jayree/sfdx-plugin-source/issues/1258)) ([d6467a2](https://github.com/jayree/sfdx-plugin-source/commit/d6467a2c5c468f595ac0bab705e387aa54b612d4))
+
 ## [1.3.134](https://github.com/jayree/sfdx-plugin-source/compare/v1.3.133...v1.3.134) (2025-10-10)
 
 
