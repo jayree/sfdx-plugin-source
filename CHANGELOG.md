@@ -1,3 +1,13 @@
+## [1.3.140](https://github.com/jayree/sfdx-plugin-source/compare/v1.3.139...v1.3.140) (2025-11-16)
+
+
+### Bug Fixes
+
+* **deps:** bump @jayree/changelog from 1.2.19 to 1.2.20 ([#1285](https://github.com/jayree/sfdx-plugin-source/issues/1285)) ([a590c05](https://github.com/jayree/sfdx-plugin-source/commit/a590c0539a6dad2345c3f0f0d61ccc552798cc94))
+* **deps:** bump fast-xml-parser from 5.3.1 to 5.3.2 ([#1284](https://github.com/jayree/sfdx-plugin-source/issues/1284)) ([7ad8473](https://github.com/jayree/sfdx-plugin-source/commit/7ad84735cd6b277f7ff862dd04314d674244032e))
+* **deps:** bump globby from 14.1.0 to 15.0.0 ([#1244](https://github.com/jayree/sfdx-plugin-source/issues/1244)) ([fcff9ab](https://github.com/jayree/sfdx-plugin-source/commit/fcff9abe89e080126f8483d211883032868def74))
+* **deps:** bump globby from 15.0.0 to 16.0.0 ([#1289](https://github.com/jayree/sfdx-plugin-source/issues/1289)) ([167cea4](https://github.com/jayree/sfdx-plugin-source/commit/167cea498664b8c52cb5e37d9a9ac0782f42c481))
+
 ## [1.3.139](https://github.com/jayree/sfdx-plugin-source/compare/v1.3.138...v1.3.139) (2025-11-14)
 
 
