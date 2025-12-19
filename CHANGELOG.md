@@ -1,3 +1,11 @@
+## [1.3.145](https://github.com/jayree/sfdx-plugin-source/compare/v1.3.144...v1.3.145) (2025-12-19)
+
+
+### Bug Fixes
+
+* **deps:** bump fast-xml-parser from 5.3.2 to 5.3.3 ([#1313](https://github.com/jayree/sfdx-plugin-source/issues/1313)) ([f83c600](https://github.com/jayree/sfdx-plugin-source/commit/f83c600370b8ee0b6a09202398bf055071760974))
+* **deps:** bump fs-extra from 11.3.2 to 11.3.3 ([#1311](https://github.com/jayree/sfdx-plugin-source/issues/1311)) ([ecc4e7d](https://github.com/jayree/sfdx-plugin-source/commit/ecc4e7d55aa1c85a4ad02e89306dfc9da0a3d322))
+
 ## [1.3.144](https://github.com/jayree/sfdx-plugin-source/compare/v1.3.143...v1.3.144) (2025-12-12)
 
 
