@@ -1,3 +1,10 @@
+## [1.3.146](https://github.com/jayree/sfdx-plugin-source/compare/v1.3.145...v1.3.146) (2025-12-26)
+
+
+### Bug Fixes
+
+* **deps:** bump globby from 16.0.0 to 16.1.0 ([#1317](https://github.com/jayree/sfdx-plugin-source/issues/1317)) ([cbb7c5f](https://github.com/jayree/sfdx-plugin-source/commit/cbb7c5f18a86590fa51ec15f01f6275bf2d2a04b))
+
 ## [1.3.145](https://github.com/jayree/sfdx-plugin-source/compare/v1.3.144...v1.3.145) (2025-12-19)
 
 
