@@ -1,3 +1,11 @@
+## [1.3.151](https://github.com/jayree/sfdx-plugin-source/compare/v1.3.150...v1.3.151) (2026-01-30)
+
+
+### Bug Fixes
+
+* **deps:** bump @salesforce/source-deploy-retrieve ([#1337](https://github.com/jayree/sfdx-plugin-source/issues/1337)) ([d9f47d7](https://github.com/jayree/sfdx-plugin-source/commit/d9f47d7e8b659148d85582b67c122738aaa235d3))
+* **deps:** bump @salesforce/source-tracking from 7.8.1 to 7.8.2 ([#1339](https://github.com/jayree/sfdx-plugin-source/issues/1339)) ([c2e3a41](https://github.com/jayree/sfdx-plugin-source/commit/c2e3a41c96360bf824645962ff14bfaada26ffb6))
+
 ## [1.3.150](https://github.com/jayree/sfdx-plugin-source/compare/v1.3.149...v1.3.150) (2026-01-23)
 
 
