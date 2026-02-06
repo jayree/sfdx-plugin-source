@@ -1718,16 +1718,16 @@
     proxy-agent "^6.4.0"
     yaml "^2.8.1"
 
-"@salesforce/source-tracking@^7.8.2":
-  version "7.8.2"
-  resolved "https://registry.yarnpkg.com/@salesforce/source-tracking/-/source-tracking-7.8.2.tgz#3bd186dd98ae72d52485ddb61e4b4b772a72c1aa"
-  integrity sha512-NCzCTiVztYsM9AtMhFCruG5dO9ucWjEI6NnF08zueGagP/F8QY4Z6JRrXst1MVYz5287XKWFqDHvA2nXVmAh3Q==
+"@salesforce/source-tracking@^7.8.4":
+  version "7.8.4"
+  resolved "https://registry.yarnpkg.com/@salesforce/source-tracking/-/source-tracking-7.8.4.tgz#e0f9a70cb50d15d3cbf262183d1b44c963317930"
+  integrity sha512-mF7tbRYOjMUYNFfyMHK85qDJACXkR4wP6Osmzc1kAuvArn7yK9gFEKPHS3EEh7oR/yO/uQIbnoNMAAUceOfYMg==
   dependencies:
     "@salesforce/core" "^8.24.0"
     "@salesforce/kit" "^3.2.4"
     "@salesforce/source-deploy-retrieve" "^12.31.8"
     "@salesforce/ts-types" "^2.0.12"
-    fast-xml-parser "^4.5.3"
+    fast-xml-parser "^5.3.4"
     graceful-fs "^4.2.11"
     isomorphic-git "^1.34.2"
     ts-retry-promise "^0.8.1"
