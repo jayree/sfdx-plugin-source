@@ -1,3 +1,11 @@
+## [1.3.164](https://github.com/jayree/sfdx-plugin-source/compare/v1.3.163...v1.3.164) (2026-04-18)
+
+
+### Bug Fixes
+
+* **deps:** bump @salesforce/source-tracking from 7.8.9 to 7.8.14 ([#1425](https://github.com/jayree/sfdx-plugin-source/issues/1425)) ([30c55fe](https://github.com/jayree/sfdx-plugin-source/commit/30c55fe8e372f8f76306c9648eee0e0fae8bf4ba))
+* **deps:** bump fast-xml-parser from 5.5.11 to 5.6.0 ([#1422](https://github.com/jayree/sfdx-plugin-source/issues/1422)) ([15a1bfb](https://github.com/jayree/sfdx-plugin-source/commit/15a1bfb10495f5155189afc12550f4a66056a48b))
+
 ## [1.3.163](https://github.com/jayree/sfdx-plugin-source/compare/v1.3.162...v1.3.163) (2026-04-10)
 
 
