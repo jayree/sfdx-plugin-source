@@ -1,3 +1,15 @@
+## [1.3.168](https://github.com/jayree/sfdx-plugin-source/compare/v1.3.167...v1.3.168) (2026-05-16)
+
+
+### Bug Fixes
+
+* **deps:** bump @jayree/changelog from 1.2.31 to 1.2.32 ([#1450](https://github.com/jayree/sfdx-plugin-source/issues/1450)) ([4e97883](https://github.com/jayree/sfdx-plugin-source/commit/4e978838861e90c88f43b01552d36398edfe578d))
+* **deps:** bump @salesforce/core from 8.29.0 to 8.30.0 ([#1456](https://github.com/jayree/sfdx-plugin-source/issues/1456)) ([b6aaf8c](https://github.com/jayree/sfdx-plugin-source/commit/b6aaf8ccd0299ce68fb2cbc17f95a8e6bb769b2f))
+* **deps:** bump @salesforce/sf-plugins-core from 12.2.13 to 12.2.16 ([#1454](https://github.com/jayree/sfdx-plugin-source/issues/1454)) ([f9fe162](https://github.com/jayree/sfdx-plugin-source/commit/f9fe1627ffaa9e142a4cf40edd7f19aada424333))
+* **deps:** bump @salesforce/source-tracking from 7.8.14 to 7.8.16 ([#1460](https://github.com/jayree/sfdx-plugin-source/issues/1460)) ([109cba3](https://github.com/jayree/sfdx-plugin-source/commit/109cba3880eacffda147bcc188dc258f92c8e935))
+* **deps:** bump ansis from 4.2.0 to 4.3.0 ([#1453](https://github.com/jayree/sfdx-plugin-source/issues/1453)) ([980262e](https://github.com/jayree/sfdx-plugin-source/commit/980262e2caec2e7a9f34b9ed4fc2637d432fc2ab))
+* **deps:** bump fast-xml-parser from 5.7.3 to 5.8.0 ([#1452](https://github.com/jayree/sfdx-plugin-source/issues/1452)) ([2852a8f](https://github.com/jayree/sfdx-plugin-source/commit/2852a8f16d10dcfd8b305358bb87cefc0df273ba))
+
 ## [1.3.167](https://github.com/jayree/sfdx-plugin-source/compare/v1.3.166...v1.3.167) (2026-05-08)
 
 
