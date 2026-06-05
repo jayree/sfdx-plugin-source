@@ -1,3 +1,13 @@
+## [1.3.171](https://github.com/jayree/sfdx-plugin-source/compare/v1.3.170...v1.3.171) (2026-06-05)
+
+
+### Bug Fixes
+
+* **deps:** bump @jayree/changelog from 1.2.33 to 1.2.34 ([#1484](https://github.com/jayree/sfdx-plugin-source/issues/1484)) ([f89397e](https://github.com/jayree/sfdx-plugin-source/commit/f89397ebe698ee9bc4a18e617cf0bc8955f8be27))
+* **deps:** bump @salesforce/sf-plugins-core from 12.2.22 to 12.2.24 ([#1482](https://github.com/jayree/sfdx-plugin-source/issues/1482)) ([fb7c7fc](https://github.com/jayree/sfdx-plugin-source/commit/fb7c7fc332076f43f1f65fa5d2238e657703aba5))
+* **deps:** bump @salesforce/source-deploy-retrieve ([#1479](https://github.com/jayree/sfdx-plugin-source/issues/1479)) ([95163c4](https://github.com/jayree/sfdx-plugin-source/commit/95163c4bf777bd4d6ff8aba3c353fc7ff67607d6))
+* **deps:** bump ansis from 4.3.0 to 4.3.1 ([#1485](https://github.com/jayree/sfdx-plugin-source/issues/1485)) ([fbd0d53](https://github.com/jayree/sfdx-plugin-source/commit/fbd0d53271def2ac60649832d5d4e1b895bebbc9))
+
 ## [1.3.170](https://github.com/jayree/sfdx-plugin-source/compare/v1.3.169...v1.3.170) (2026-05-29)
 
 
