@@ -1,3 +1,10 @@
+## [1.3.181](https://github.com/jayree/sfdx-plugin-source/compare/v1.3.180...v1.3.181) (2026-08-06)
+
+
+### Bug Fixes
+
+* **deps:** bump github/codeql-action from 4.37.4 to 4.37.5 ([#1554](https://github.com/jayree/sfdx-plugin-source/issues/1554)) ([9689d65](https://github.com/jayree/sfdx-plugin-source/commit/9689d65e39571b360a0c3513baf2087c4c58374d))
+
 ## [1.3.180](https://github.com/jayree/sfdx-plugin-source/compare/v1.3.179...v1.3.180) (2026-08-03)
 
 
