@@ -1,3 +1,24 @@
+# [2.0.0](https://github.com/jayree/sfdx-plugin-source/compare/v1.3.184...v2.0.0) (2026-08-21)
+
+
+* feat!: require Node >=22.0.0, drop EOL Node versions ([295d1b6](https://github.com/jayree/sfdx-plugin-source/commit/295d1b6a0f285e34db2afa53ab87f3f8c552ebc5))
+
+
+### Bug Fixes
+
+* **deps:** bump @salesforce/core from 8.32.6 to 9.1.2 ([#1577](https://github.com/jayree/sfdx-plugin-source/issues/1577)) ([c011105](https://github.com/jayree/sfdx-plugin-source/commit/c011105fb5def3b090a0770144e61b194306719f))
+* **deps:** bump @salesforce/kit from 3.2.6 to 4.0.0 ([#1562](https://github.com/jayree/sfdx-plugin-source/issues/1562)) ([1241a8a](https://github.com/jayree/sfdx-plugin-source/commit/1241a8a96cf09c0008d5328eb32dd5e9b73cd819))
+* **deps:** bump @salesforce/sf-plugins-core from 12.2.28 to 13.0.0 ([#1557](https://github.com/jayree/sfdx-plugin-source/issues/1557)) ([b64df8c](https://github.com/jayree/sfdx-plugin-source/commit/b64df8ce931eebe60ce24a917645dcb00775d92e))
+* **deps:** bump @salesforce/source-deploy-retrieve ([#1575](https://github.com/jayree/sfdx-plugin-source/issues/1575)) ([8a42341](https://github.com/jayree/sfdx-plugin-source/commit/8a42341701510f96f861017496814b3939ae3a5a))
+* **deps:** bump @salesforce/source-tracking from 7.8.19 to 8.1.0 ([#1574](https://github.com/jayree/sfdx-plugin-source/issues/1574)) ([8005b2b](https://github.com/jayree/sfdx-plugin-source/commit/8005b2bb955413ff1058ba1dee915e660565963f))
+* **deps:** bump @salesforce/ts-types from 2.0.12 to 3.0.1 ([#1556](https://github.com/jayree/sfdx-plugin-source/issues/1556)) ([e2eb004](https://github.com/jayree/sfdx-plugin-source/commit/e2eb004b719e94dbcdaeeda2e78299c3b259eb3f))
+* **deps:** bump actions/setup-node from 6 to 7 ([#1531](https://github.com/jayree/sfdx-plugin-source/issues/1531)) ([55ac7e5](https://github.com/jayree/sfdx-plugin-source/commit/55ac7e5edf24bb6816940a2fabbb55463e999a24))
+
+
+### BREAKING CHANGES
+
+* raises minimum Node to >=22.0.0
+
 ## [1.3.184](https://github.com/jayree/sfdx-plugin-source/compare/v1.3.183...v1.3.184) (2026-08-21)
 
 
