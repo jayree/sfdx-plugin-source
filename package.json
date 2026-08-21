@@ -7,41 +7,46 @@
   "bugs": "https://github.com/jayree/sfdx-plugin-source/issues",
   "dependencies": {
     "@jayree/changelog": "^1.2.39",
-    "@oclif/core": "^4.13.5",
-    "@salesforce/core": "^9.1.2",
+    "@oclif/core": "^4.14.0",
+    "@salesforce/core": "^9.1.4",
     "@salesforce/kit": "^4.0.0",
-    "@salesforce/sf-plugins-core": "^13.0.0",
-    "@salesforce/source-deploy-retrieve": "^13.1.1",
-    "@salesforce/source-tracking": "^8.1.0",
+    "@salesforce/sf-plugins-core": "^13.0.3",
+    "@salesforce/source-deploy-retrieve": "^13.2.0",
+    "@salesforce/source-tracking": "^8.1.1",
     "@salesforce/ts-types": "^3.0.1",
     "ansis": "^4.3.1",
     "debug": "^4.4.3",
     "deep-object-diff": "^1.1.9",
     "fast-xml-parser": "^5.11.0",
     "fs-extra": "^11.4.0",
-    "globby": "^16.2.3",
+    "globby": "^16.2.4",
     "object-path": "^0.11.8",
     "tslib": "^2.8.1"
   },
   "devDependencies": {
     "@oclif/plugin-command-snapshot": "^5.3.35",
     "@oclif/plugin-help": "^6.2.58",
-    "@salesforce/dev-scripts": "^13.0.1",
+    "@salesforce/dev-scripts": "^13.0.2",
     "@salesforce/ts-sinon": "^1.4.36",
+    "@types/chai": "^5.2.3",
     "@types/debug": "^4.1.13",
     "@types/fs-extra": "^11.0.4",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^26",
     "@types/object-path": "^0.11.4",
+    "@types/sinon": "^22.0.0",
     "c8": "^12.0.0",
-    "eslint-config-oclif": "^5.2",
-    "eslint-plugin-prettier": "^5.5.6",
-    "eslint-plugin-sf-plugin": "^1.20.33",
+    "eslint": "^10.9.0",
+    "eslint-config-oclif": "^7.1",
+    "eslint-config-salesforce-typescript": "^6.0.0",
+    "eslint-plugin-sf-plugin": "^3.0.0",
     "is-ci": "^4.1.0",
     "oclif": "^4.23.30",
     "patch-package": "^8.0.1",
     "prettier": "^3.9.6",
     "pretty-quick": "^4.2.2",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.9.3"
+    "tsx": "^4.23.12",
+    "typescript": "^6.0.3"
   },
   "engines": {
     "node": ">=16.0.0"
@@ -141,7 +146,7 @@
       ]
     },
     "compile": {
-      "command": "tsc --build --pretty",
+      "command": "tsc -p . --pretty --incremental",
       "files": [
         "src/**/*.ts",
         "**/tsconfig.json",
@@ -165,11 +170,12 @@
       "output": []
     },
     "lint": {
-      "command": "eslint --color --cache --cache-location .eslintcache .",
+      "command": "eslint src test --color --cache --cache-location .eslintcache",
       "files": [
         "src/**/*.ts",
         "test/**/*.ts",
         "messages/**",
+        "**/eslint.config.*",
         "**/.eslint*",
         "**/tsconfig.json"
       ],
@@ -193,7 +199,7 @@
       "output": []
     },
     "test:deprecation-policy": {
-      "command": "node --loader ts-node/esm --no-warnings=ExperimentalWarning \"./bin/dev.js\" snapshot:compare",
+      "command": "node \"./bin/dev.js\" snapshot:compare",
       "files": [
         "src/**/*.ts"
       ],
@@ -203,7 +209,7 @@
       ]
     },
     "test:json-schema": {
-      "command": "node --loader ts-node/esm --no-warnings=ExperimentalWarning \"./bin/dev.js\" schema:compare",
+      "command": "node \"./bin/dev.js\" schema:compare",
       "files": [
         "src/**/*.ts",
         "schemas"

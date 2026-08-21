@@ -118,6 +118,7 @@ export async function profileElementInjection(profiles: string[], customObjectsF
       ux.warn('no ensureObjectPermissions list configured');
     });
   }
+  // eslint-disable-next-line @typescript-eslint/await-thenable
   for await (const file of profiles) {
     if (await fs.pathExists(file)) {
       const data = (await resolve(file)) as {
@@ -219,7 +220,7 @@ async function getGlobbyBaseDirectory(globbypath: string): Promise<string> {
   try {
     (await fs.lstat(globbypath)).isDirectory();
     return globbypath;
-  } catch (error) {
+  } catch {
     return getGlobbyBaseDirectory(path.dirname(globbypath));
   }
 }
@@ -227,12 +228,14 @@ async function getGlobbyBaseDirectory(globbypath: string): Promise<string> {
 async function sourcemove(movesources: string[][] | undefined, root: string, filter: string[]): Promise<fixResult[]> {
   const array = [];
   if (movesources) {
+    // eslint-disable-next-line @typescript-eslint/await-thenable
     for await (const filepath of movesources) {
       let files = await globby(path.posix.join(root.split(path.sep).join(path.posix.sep), filepath[0]));
       if (filter.length > 0) {
         files = files.filter((el) => filter.map((f) => f.split(path.sep).join(path.posix.sep)).includes(el));
       }
       const from = await getGlobbyBaseDirectory(filepath[0]);
+      // eslint-disable-next-line @typescript-eslint/await-thenable
       for await (const file of files) {
         if (await fs.pathExists(file)) {
           const destinationFile = path.join(filepath[1], path.relative(from, file));
@@ -252,11 +255,13 @@ async function sourcemove(movesources: string[][] | undefined, root: string, fil
 async function sourcedelete(deletesources: string[] | undefined, root: string, filter: string[]): Promise<fixResult[]> {
   const array = [];
   if (deletesources) {
+    // eslint-disable-next-line @typescript-eslint/await-thenable
     for await (const filepath of deletesources) {
       let files = await globby(path.posix.join(root.split(path.sep).join(path.posix.sep), filepath));
       if (filter.length > 0) {
         files = files.filter((el) => filter.map((f) => f.split(path.sep).join(path.posix.sep)).includes(el));
       }
+      // eslint-disable-next-line @typescript-eslint/await-thenable
       for await (const file of files) {
         if (await fs.pathExists(file)) {
           debug(`delete file: ${file}`);
@@ -429,6 +434,7 @@ async function updateObject<T extends object>(object: T): Promise<T> {
         }
       };
       recursive(node, '');
+      // eslint-disable-next-line @typescript-eslint/await-thenable
       for await (const element of replaceArray) {
         if (element[0] === '<username>') {
           objectPath.set(node, element[1], (await getConnectionFromArgv())?.getUsername());
@@ -452,8 +458,10 @@ async function fnSet<T extends object>(
   data: JsonMap,
 ): Promise<fixResult[]> {
   const array = [];
+  // eslint-disable-next-line @typescript-eslint/await-thenable
   for await (const settask of fnset) {
     const settaskpaths = kit.ensureArray(new ObjectPathResolver(data).resolveString(settask.path).value());
+    // eslint-disable-next-line @typescript-eslint/await-thenable
     for await (const settaskpath of settaskpaths) {
       if (typeof settaskpath !== 'undefined') {
         settask.value = await updateValue(settask.value);
@@ -520,12 +528,14 @@ async function sourcefix<T extends object>(
 ): Promise<fixResult[]> {
   let array: fixResult[] = [];
   if (fixsources) {
+    // eslint-disable-next-line @typescript-eslint/await-thenable
     for await (const filename of Object.keys(fixsources)) {
       let files = await globby(path.posix.join(root.split(path.sep).join(path.posix.sep), filename));
       if (filter.length > 0) {
         files = files.filter((el) => filter.map((f) => f.split(path.sep).join(path.posix.sep)).includes(el));
       }
       const fn = fixsources[filename];
+      // eslint-disable-next-line @typescript-eslint/await-thenable
       for await (const file of files) {
         if (await fs.pathExists(file)) {
           const data = await resolve(file);
@@ -586,6 +596,7 @@ export async function getFixes(tags: string[], onlyActive: boolean): Promise<Fix
       if (onlyActive) {
         tags = cfg.applySourceFixes;
       }
+      // eslint-disable-next-line @typescript-eslint/await-thenable
       for await (const tag of tags) {
         debug({ tag });
         const fixesWithLabel = cfg[tag] as { [label: string]: FixConfig };
@@ -610,6 +621,7 @@ export async function applyFixes(fixes: FixConfig, filter: string[] = []): Promi
 
   const updatedfiles: aggregatedFixResults = {};
 
+  // eslint-disable-next-line @typescript-eslint/await-thenable
   for await (const task of Object.keys(fixes)) {
     if (!Array.isArray(updatedfiles[task])) {
       updatedfiles[task] = [];
@@ -617,10 +629,12 @@ export async function applyFixes(fixes: FixConfig, filter: string[] = []): Promi
     updatedfiles[task] = updatedfiles[task].concat(await sourcedelete(fixes[task].files?.delete, root, filter));
   }
 
+  // eslint-disable-next-line @typescript-eslint/await-thenable
   for await (const task of Object.keys(fixes)) {
     updatedfiles[task] = updatedfiles[task].concat(await sourcemove(fixes[task].files?.move, root, filter));
   }
 
+  // eslint-disable-next-line @typescript-eslint/await-thenable
   for await (const task of Object.keys(fixes)) {
     updatedfiles[task] = updatedfiles[task].concat(await sourcefix(fixes[task].files?.modify, root, filter));
   }
@@ -673,6 +687,7 @@ export async function updateProfiles(
     const retrieveResult = await mdapiRetrieve.pollStatus();
     customObjects = retrieveResult.getFileResponses().filter((el) => el.type === 'CustomObject');
 
+    // eslint-disable-next-line @typescript-eslint/await-thenable
     for await (const retrieveProfile of retrieveResult
       .getFileResponses()
       .filter((component) => component.type === 'Profile')) {

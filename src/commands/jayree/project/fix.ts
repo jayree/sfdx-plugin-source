@@ -21,8 +21,6 @@ import { applyFixes, getFixes, logFixes, setDebug } from '../../../utils/souceUt
 Messages.importMessagesDirectoryFromMetaUrl(import.meta.url);
 
 const messages = Messages.loadMessages('@jayree/sfdx-plugin-source', 'sourcefix');
-
-// eslint-disable-next-line sf-plugin/command-example
 export default class FixMetadata extends SfCommand<AnyJson> {
   public static readonly summary = messages.getMessage('commandDescription');
 

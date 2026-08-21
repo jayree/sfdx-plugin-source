@@ -30,8 +30,6 @@ type CompareResponse = {
   removedMetadata?: string[];
   modifiedMetadata?: string[];
 };
-
-// eslint-disable-next-line sf-plugin/command-example
 export default class CompareSourceSnapshot extends SfCommand<CompareResponse> {
   public static readonly summary = messages.getMessage('summary');
 
@@ -47,7 +45,6 @@ export default class CompareSourceSnapshot extends SfCommand<CompareResponse> {
   public static readonly deprecateAliases = true;
   public static readonly aliases = ['jayree:source:snapshot:compare'];
 
-  // eslint-disable-next-line @typescript-eslint/require-await
   public async run(): Promise<CompareResponse> {
     const { flags } = await this.parse(CompareSourceSnapshot);
     const orig = (await fs.readJSON(flags.filepath)) as JSON;
@@ -57,7 +54,7 @@ export default class CompareSourceSnapshot extends SfCommand<CompareResponse> {
       this.project?.getPath(),
     );
 
-    const diff = detailedDiff(orig, results) as { added: object; deleted: object; updated: object };
+    const diff = detailedDiff(orig, results);
     const addedMetadata = Object.keys(diff.added).filter((k) => !(k in orig));
     const removedMetadata = Object.keys(diff.deleted).filter((k) => !(k in results));
     const modifiedMetadata = [

@@ -51,7 +51,8 @@ async function getConnectionFromArgv(argv: string[]): Promise<{
   if (aliasOrUsername?.length === 0) {
     try {
       const aggregator = await ConfigAggregator.create();
-      aliasOrUsername = aggregator.getPropertyValue('target-org')?.toString();
+      const targetOrg = aggregator.getPropertyValue('target-org');
+      aliasOrUsername = typeof targetOrg === 'string' ? targetOrg : undefined;
     } catch {
       throw new Error(
         'This command requires a username to apply <mydomain> or <username>. Specify it with the -u (-o) parameter or with the "sfdx config:set defaultusername=<username>" command.',
@@ -104,7 +105,6 @@ export const prerun: Hook<'prerun'> = async function (options) {
         } else {
           let localServerMaxRevisionCounter: number;
           try {
-            // eslint-disable-next-line @typescript-eslint/no-shadow
             const { serverMaxRevisionCounter } = (await fs.readJSON(
               getCurrentStateFolderFilePath(
                 projectPath,
