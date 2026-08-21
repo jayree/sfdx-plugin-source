@@ -23,9 +23,12 @@ export async function getParsedSourceComponents(
 ): Promise<{ [key: string]: JsonMap }> {
   const results: { [key: string]: JsonMap } = {};
   if (uniquePackageDirectories) {
+    // eslint-disable-next-line @typescript-eslint/await-thenable
     for await (const packageDirectory of uniquePackageDirectories) {
       const componentSet = ComponentSet.fromSource(packageDirectory).getSourceComponents();
+      // eslint-disable-next-line @typescript-eslint/await-thenable
       for await (const component of componentSet) {
+        // eslint-disable-next-line @typescript-eslint/await-thenable
         for await (const childComponent of component.getChildren()) {
           results[relative(projectPath as string, childComponent.xml as string)] = await childComponent.parseXml();
         }

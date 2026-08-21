@@ -22,8 +22,6 @@ import { getParsedSourceComponents } from '../../../../utils/parse.js';
 Messages.importMessagesDirectoryFromMetaUrl(import.meta.url);
 
 const messages = Messages.loadMessages('@jayree/sfdx-plugin-source', 'generate');
-
-// eslint-disable-next-line sf-plugin/command-example
 export default class GenerateSourceSnapshot extends SfCommand<AnyJson> {
   public static readonly summary = messages.getMessage('summary');
 
