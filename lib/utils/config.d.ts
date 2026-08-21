@@ -8,5 +8,5 @@ export type Config = {
     applySourceFixes: string[];
     runHooks: boolean;
 };
-declare const _default: (path?: string) => Promise<Config>;
 export default _default;
+declare function _default(path?: string): Promise<Config>;
