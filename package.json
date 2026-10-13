@@ -13,7 +13,7 @@
     "@salesforce/sf-plugins-core": "^13.0.7",
     "@salesforce/source-deploy-retrieve": "^13.4.5",
     "@salesforce/source-tracking": "^8.1.4",
-    "@salesforce/ts-types": "^3.2.1",
+    "@salesforce/ts-types": "^3.2.2",
     "ansis": "^4.4.0",
     "debug": "^4.4.3",
     "deep-object-diff": "^1.1.9",
