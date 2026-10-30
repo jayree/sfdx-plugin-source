@@ -1,3 +1,14 @@
+## [2.0.14](https://github.com/jayree/sfdx-plugin-source/compare/v2.0.13...v2.0.14) (2026-10-30)
+
+
+### Bug Fixes
+
+* **deps:** bump @jayree/changelog from 1.2.43 to 1.2.44 ([#1662](https://github.com/jayree/sfdx-plugin-source/issues/1662)) ([01e7c7c](https://github.com/jayree/sfdx-plugin-source/commit/01e7c7cd77b360e0e832b108997b53d0f8a5b3ae))
+* **deps:** bump @salesforce/kit from 4.0.1 to 4.0.8 ([#1668](https://github.com/jayree/sfdx-plugin-source/issues/1668)) ([8628e22](https://github.com/jayree/sfdx-plugin-source/commit/8628e224a178f4f2aa4f8275580891ba24e53c22))
+* **deps:** bump @salesforce/sf-plugins-core from 13.0.7 to 13.0.8 ([#1665](https://github.com/jayree/sfdx-plugin-source/issues/1665)) ([b9c6369](https://github.com/jayree/sfdx-plugin-source/commit/b9c63694d21766f897e1344974cfadc9cff811b7))
+* **deps:** bump @salesforce/source-deploy-retrieve from 13.7.0 to 13.8.1 ([#1663](https://github.com/jayree/sfdx-plugin-source/issues/1663)) ([238dbb9](https://github.com/jayree/sfdx-plugin-source/commit/238dbb9bf135bb9132f0522861b01255f6b18a28))
+* **deps:** bump @salesforce/ts-types from 3.2.2 to 3.2.3 ([#1661](https://github.com/jayree/sfdx-plugin-source/issues/1661)) ([27dd5da](https://github.com/jayree/sfdx-plugin-source/commit/27dd5da6f446bdbce72835269e55256bc04d4558))
+
 ## [2.0.13](https://github.com/jayree/sfdx-plugin-source/compare/v2.0.12...v2.0.13) (2026-10-26)
 
 
